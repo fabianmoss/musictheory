@@ -26,7 +26,7 @@ Quickstart
 
 To install the Python library ``musictheory``, type the following in your terminal:
 
-.. code-block:: terminal
+.. code-block:: bash
 
     pip install musictheory
 
