@@ -140,6 +140,7 @@ do calculations with pitch classes.</p>
 </div>
 <div class="section" id="pitch-class-sets">
 <h2><span class="section-number">2.4. </span>Pitch-Class Sets<a class="headerlink" href="#pitch-class-sets" title="Permalink to this headline">¶</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(y=\{y_1,\ldots,y_m\}\)</span> be a pitch-class set.</p>
 <ul class="simple">
 <li><p>Sets that contain pitch classes</p></li>
 <li><p>ordered: {0,4,7}</p></li>
@@ -158,12 +159,22 @@ do calculations with pitch classes.</p>
 <ul class="simple">
 <li><p>{0,4,7} + 7 = {7,11,14} = {7,11,2}</p></li>
 </ul>
+<p>The <em>transposition</em> of a pitch-class set <cite>y</cite> by <cite>n</cite> semitones is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T_n(y) &amp;= y + n\mod~12\\
+       &amp;= \{y_1 + n\mod~12, \ldots, y_m + n\mod~12\}\end{split}\]</div>
 </div>
 <div class="section" id="inversion">
 <h3><span class="section-number">2.4.3. </span>Inversion<a class="headerlink" href="#inversion" title="Permalink to this headline">¶</a></h3>
 <p>inversion: reversing the sign of each pc (mod 12)</p>
 <ul class="simple">
 <li><p>[0,4,7] =&gt; [0,-4,-7] = [0,8,5]</p></li>
+</ul>
+<p>The <em>inversion</em> of a pitch-class set <cite>y</cite> is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I(y) &amp;= -y\mod~12 \\
+     &amp;= \{-y_1\mod~12, \ldots,-y_m\mod~12\}\end{split}\]</div>
+<ul class="simple">
 <li><p>Inversion In, Ixy</p></li>
 </ul>
 </div>

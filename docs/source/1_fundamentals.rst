@@ -126,6 +126,8 @@ GISs
 Pitch-Class Sets
 ----------------
 
+Let :math:`y=\{y_1,\ldots,y_m\}` be a pitch-class set. 
+
 - Sets that contain pitch classes
 - ordered: {0,4,7}
 - unordered: {7,0,4}
@@ -143,12 +145,24 @@ transposition: adding n to each pc (mod 12)
 
 - {0,4,7} + 7 = {7,11,14} = {7,11,2}
 
+The *transposition* of a pitch-class set `y` by `n` semitones is given by
+
+.. math::
+   T_n(y) &= y + n\mod~12\\ 
+          &= \{y_1 + n\mod~12, \ldots, y_m + n\mod~12\}
+
 Inversion
 ~~~~~~~~~
 
 inversion: reversing the sign of each pc (mod 12)
 
 - [0,4,7] => [0,-4,-7] = [0,8,5]
+
+The *inversion* of a pitch-class set `y` is given by 
+
+.. math::
+   I(y) &= -y\mod~12 \\ 
+        &= \{-y_1\mod~12, \ldots,-y_m\mod~12\}
 
 
 - Inversion In, Ixy
