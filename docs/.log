@@ -1,0 +1,30 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.27)  21 MAY 2020 14:14
+entering extended mode
+**musictheory
+("C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\.tex"
+! Interruption.
+<to be read again> 
+                   \begingroup 
+l.1 
+    %%
+? Y
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+H for help, X to quit.
+? X
+ 
+Here is how much of TeX's memory you used:
+ 9 strings out of 480896
+ 299 string characters out of 2895750
+ 239466 words of memory out of 3000000
+ 15995 multiletter control sequences out of 15000+200000
+ 532338 words of font info for 24 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 3i,0n,1p,48b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
