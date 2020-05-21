@@ -166,8 +166,21 @@ Music as the “missing Humboldt system” (Merker, 2002) with its “orthogonal
 \end{itemize}
 
 
-\section{General notes}
-\label{\detokenize{0_intro:general-notes}}\begin{itemize}
+\section{Quickstart}
+\label{\detokenize{0_intro:quickstart}}
+\begin{sphinxadmonition}{warning}{Warning:}
+These instructions do not work yet.
+\end{sphinxadmonition}
+
+To install the Python library \sphinxcode{\sphinxupquote{musictheory}}, type the following in your terminal:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+pip install musictheory
+\end{sphinxVerbatim}
+
+
+\section{Notes}
+\label{\detokenize{0_intro:notes}}\begin{itemize}
 \item {} 
 Overarching goal is to have an ACCESSIBLE introduction for musicologists with elementary understanding of a programming language such as Python or R. Requirement should be a sound understanding of how functions, loops, and conditionals work.
 
@@ -183,9 +196,8 @@ the algorithms/methods used in each chapter should be one of the most basic inst
 
 \end{itemize}
 
+Old:
 
-\section{Notes (old)}
-\label{\detokenize{0_intro:notes-old}}
 General remark: Create excercises with listening, composing and analyzing tasks.
 \begin{itemize}
 \item {} 
@@ -235,6 +247,14 @@ visualisations (pitch\sphinxhyphen{}time plots)
 \sphinxhyphen{} MIDI
 \sphinxhyphen{} modern Western notation
 \sphinxhyphen{} different keys (not only treble and bass)
+
+\end{itemize}
+
+
+\section{Acknowledgements}
+\label{\detokenize{0_intro:acknowledgements}}\begin{itemize}
+\item {} 
+DCML
 
 \end{itemize}
 
@@ -443,6 +463,11 @@ Inversion In, Ixy
 
 \end{itemize}
 
+\begin{sphinxadmonition}{note}{Note:}
+Note that this definition is an entirely different concept
+than \sphinxstyleemphasis{chord inversion} with which we will deal in later chapters.
+\end{sphinxadmonition}
+
 
 \subsection{Index number}
 \label{\detokenize{1_fundamentals:index-number}}\begin{itemize}
@@ -579,167 +604,11 @@ Hanninen 2012
 \chapter{Developers}
 \label{\detokenize{index:developers}}
 
-\section{Installation}
-\label{\detokenize{install:installation}}\label{\detokenize{install::doc}}
-\begin{sphinxadmonition}{warning}{Warning:}
-These instructions do not work yet.
-\end{sphinxadmonition}
+\section{API Reference \sphinxhyphen{} musictheory}
+\label{\detokenize{api:module-musictheory}}\label{\detokenize{api:api-reference-musictheory}}\label{\detokenize{api::doc}}\index{module@\spxentry{module}!musictheory@\spxentry{musictheory}}\index{musictheory@\spxentry{musictheory}!module@\spxentry{module}}
 
-To install the Python library \sphinxcode{\sphinxupquote{musictheory}}, type the following in your terminal:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{pip} \PYG{n}{install} \PYG{n}{musictheory}
-\end{sphinxVerbatim}
-
-
-\section{API \sphinxhyphen{} musictheory}
-\label{\detokenize{api:module-musictheory}}\label{\detokenize{api:api-musictheory}}\label{\detokenize{api::doc}}\index{module@\spxentry{module}!musictheory@\spxentry{musictheory}}\index{musictheory@\spxentry{musictheory}!module@\spxentry{module}}\phantomsection\label{\detokenize{api:module-0}}\index{module@\spxentry{module}!musictheory@\spxentry{musictheory}}\index{musictheory@\spxentry{musictheory}!module@\spxentry{module}}\index{Interval (class in musictheory)@\spxentry{Interval}\spxextra{class in musictheory}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{api:musictheory.Interval}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{musictheory.}}\sphinxbfcode{\sphinxupquote{Interval}}}{\emph{\DUrole{n}{source}}, \emph{\DUrole{n}{target}}}{}
-Class for an interval between two tones \sphinxtitleref{s} (source) and \sphinxtitleref{t} (target).
-\index{get\_euclidean\_distance() (musictheory.Interval method)@\spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{api:musictheory.Interval.get_euclidean_distance}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_euclidean\_distance}}}{\emph{\DUrole{n}{precision}\DUrole{o}{=}\DUrole{default_value}{2}}}{}
-Calculates the Euclidean distance between two tones
-with coordinates in Euler space.
-\begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{precision}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} Rounding precision.
-
-\item[{Returns}] \leavevmode
-The Euclidean distance between two tones \sphinxtitleref{s} (source) and \sphinxtitleref{t} (target).
-
-\item[{Return type}] \leavevmode
-float
-
-\end{description}\end{quote}
-\subsubsection*{Example}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{s} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} C\PYGZus{}0}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} D\PYGZsq{}1}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i}\PYG{o}{.}\PYG{n}{get\PYGZus{}euclidean\PYGZus{}distance}\PYG{p}{(}\PYG{p}{)}
-\PYG{g+go}{2.45}
-\end{sphinxVerbatim}
-
-\end{fulllineitems}
-
-\index{get\_generic\_interval() (musictheory.Interval method)@\spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{api:musictheory.Interval.get_generic_interval}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_generic\_interval}}}{\emph{\DUrole{n}{directed}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{octaves}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
-Generic interval (directed) between two tones.
-\begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
-\item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} Affects whether the returned interval is directed or not.
-
-\item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} returns generic interval class if \sphinxtitleref{False}.
-
-\end{itemize}
-
-\item[{Returns}] \leavevmode
-(Directed) generic interval from \sphinxtitleref{s} to \sphinxtitleref{t}.
-
-\item[{Return type}] \leavevmode
-int
-
-\end{description}\end{quote}
-\subsubsection*{Example}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{db} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Db,0}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{b} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} B\PYGZsq{}0}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{db}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} the interval between Db0 and B1 is an ascending thirteenth}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1}\PYG{o}{.}\PYG{n}{generic\PYGZus{}interval}\PYG{p}{(}\PYG{p}{)}
-\PYG{g+go}{13}
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i2} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,} \PYG{n}{db}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} the interval between B1 and Db0 is a descending thirteenth}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i2}\PYG{o}{.}\PYG{n}{generic\PYGZus{}interval}\PYG{p}{(}\PYG{p}{)}
-\PYG{g+go}{\PYGZhy{}13}
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i3} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,} \PYG{n}{db}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} the interval between B1 and Db0 is a descending thirteenth}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i3}\PYG{o}{.}\PYG{n}{generic\PYGZus{}interval}\PYG{p}{(}\PYG{n}{directed}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
-\PYG{g+go}{13}
-\end{sphinxVerbatim}
-
-\end{fulllineitems}
-
-\index{get\_specific\_interval() (musictheory.Interval method)@\spxentry{get\_specific\_interval()}\spxextra{musictheory.Interval method}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{api:musictheory.Interval.get_specific_interval}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_specific\_interval}}}{\emph{\DUrole{n}{directed}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{octaves}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
-Specific interval (directed) between two tones.
-\begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
-\item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} Affects whether the returned interval is directed or not.
-
-\item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} returns specific interval class if \sphinxtitleref{False}.
-
-\end{itemize}
-
-\item[{Returns}] \leavevmode
-(Directed) specific interval from \sphinxtitleref{s} to \sphinxtitleref{t}.
-
-\item[{Return type}] \leavevmode
-int
-
-\end{description}\end{quote}
-\subsubsection*{Example}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{fs} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} F\PYGZsh{}\PYGZsq{}0}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{db} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Db,0}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{fs}\PYG{p}{,} \PYG{n}{db}\PYG{p}{)}
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1}\PYG{o}{.}\PYG{n}{specific\PYGZus{}interval}\PYG{p}{(}\PYG{p}{)}
-\PYG{g+go}{17}
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1}\PYG{o}{.}\PYG{n}{specific\PYGZus{}interval}\PYG{p}{(}\PYG{n}{octaves}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
-\PYG{g+go}{5}
-\end{sphinxVerbatim}
-
-\end{fulllineitems}
-
-
-\end{fulllineitems}
-
-\index{PitchClass (class in musictheory)@\spxentry{PitchClass}\spxextra{class in musictheory}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{api:musictheory.PitchClass}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{musictheory.}}\sphinxbfcode{\sphinxupquote{PitchClass}}}{\emph{\DUrole{n}{octave}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{fifth}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{third}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{name}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
-Pitch class instance in \(\mathbb{Z}_{12}\).
-
-\end{fulllineitems}
-
-\index{PitchClassSet (class in musictheory)@\spxentry{PitchClassSet}\spxextra{class in musictheory}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{api:musictheory.PitchClassSet}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{musictheory.}}\sphinxbfcode{\sphinxupquote{PitchClassSet}}}{\emph{\DUrole{n}{octave}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{fifth}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{third}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{name}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
-Pitch class sets
-\index{interval\_vector() (musictheory.PitchClassSet method)@\spxentry{interval\_vector()}\spxextra{musictheory.PitchClassSet method}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{api:musictheory.PitchClassSet.interval_vector}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{interval\_vector}}}{}{}
-Interval vector given a pitch\sphinxhyphen{}class set.
-
-\end{fulllineitems}
-
-
-\end{fulllineitems}
-
-\index{Tone (class in musictheory)@\spxentry{Tone}\spxextra{class in musictheory}}
+\subsection{Tone}
+\label{\detokenize{api:tone}}\index{Tone (class in musictheory)@\spxentry{Tone}\spxextra{class in musictheory}}
 
 \begin{fulllineitems}
 \phantomsection\label{\detokenize{api:musictheory.Tone}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{musictheory.}}\sphinxbfcode{\sphinxupquote{Tone}}}{\emph{\DUrole{n}{octave}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{fifth}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{third}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{n}{name}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
@@ -954,11 +823,136 @@ int
 
 
 
+\subsection{Interval}
+\label{\detokenize{api:interval}}\index{Interval (class in musictheory)@\spxentry{Interval}\spxextra{class in musictheory}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{api:musictheory.Interval}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxcode{\sphinxupquote{musictheory.}}\sphinxbfcode{\sphinxupquote{Interval}}}{\emph{\DUrole{n}{source}}, \emph{\DUrole{n}{target}}}{}
+Class for an interval between two tones \sphinxtitleref{s} (source) and \sphinxtitleref{t} (target).
+\index{get\_euclidean\_distance() (musictheory.Interval method)@\spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{api:musictheory.Interval.get_euclidean_distance}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_euclidean\_distance}}}{\emph{\DUrole{n}{precision}\DUrole{o}{=}\DUrole{default_value}{2}}}{}
+Calculates the Euclidean distance between two tones
+with coordinates in Euler space.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode
+\sphinxstyleliteralstrong{\sphinxupquote{precision}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} Rounding precision.
+
+\item[{Returns}] \leavevmode
+The Euclidean distance between two tones \sphinxtitleref{s} (source) and \sphinxtitleref{t} (target).
+
+\item[{Return type}] \leavevmode
+float
+
+\end{description}\end{quote}
+\subsubsection*{Example}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{s} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} C\PYGZus{}0}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} D\PYGZsq{}1}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i}\PYG{o}{.}\PYG{n}{get\PYGZus{}euclidean\PYGZus{}distance}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+go}{2.45}
+\end{sphinxVerbatim}
+
+\end{fulllineitems}
+
+\index{get\_generic\_interval() (musictheory.Interval method)@\spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{api:musictheory.Interval.get_generic_interval}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_generic\_interval}}}{\emph{\DUrole{n}{directed}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{octaves}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
+Generic interval (directed) between two tones.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} Affects whether the returned interval is directed or not.
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} returns generic interval class if \sphinxtitleref{False}.
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+(Directed) generic interval from \sphinxtitleref{s} to \sphinxtitleref{t}.
+
+\item[{Return type}] \leavevmode
+int
+
+\end{description}\end{quote}
+\subsubsection*{Example}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{db} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Db,0}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{b} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} B\PYGZsq{}0}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{db}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} the interval between Db0 and B1 is an ascending thirteenth}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1}\PYG{o}{.}\PYG{n}{generic\PYGZus{}interval}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+go}{13}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i2} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,} \PYG{n}{db}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} the interval between B1 and Db0 is a descending thirteenth}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i2}\PYG{o}{.}\PYG{n}{generic\PYGZus{}interval}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+go}{\PYGZhy{}13}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i3} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,} \PYG{n}{db}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} the interval between B1 and Db0 is a descending thirteenth}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i3}\PYG{o}{.}\PYG{n}{generic\PYGZus{}interval}\PYG{p}{(}\PYG{n}{directed}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\PYG{g+go}{13}
+\end{sphinxVerbatim}
+
+\end{fulllineitems}
+
+\index{get\_specific\_interval() (musictheory.Interval method)@\spxentry{get\_specific\_interval()}\spxextra{musictheory.Interval method}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{api:musictheory.Interval.get_specific_interval}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_specific\_interval}}}{\emph{\DUrole{n}{directed}\DUrole{o}{=}\DUrole{default_value}{True}}, \emph{\DUrole{n}{octaves}\DUrole{o}{=}\DUrole{default_value}{True}}}{}
+Specific interval (directed) between two tones.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} Affects whether the returned interval is directed or not.
+
+\item {} 
+\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} returns specific interval class if \sphinxtitleref{False}.
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+(Directed) specific interval from \sphinxtitleref{s} to \sphinxtitleref{t}.
+
+\item[{Return type}] \leavevmode
+int
+
+\end{description}\end{quote}
+\subsubsection*{Example}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{fs} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} F\PYGZsh{}\PYGZsq{}0}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{db} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Db,0}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{fs}\PYG{p}{,} \PYG{n}{db}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1}\PYG{o}{.}\PYG{n}{specific\PYGZus{}interval}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+go}{17}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i1}\PYG{o}{.}\PYG{n}{specific\PYGZus{}interval}\PYG{p}{(}\PYG{n}{octaves}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\PYG{g+go}{5}
+\end{sphinxVerbatim}
+
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+
+
 \renewcommand{\indexname}{Python Module Index}
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{m}
-\item\relax\sphinxstyleindexentry{musictheory}\sphinxstyleindexpageref{api:\detokenize{module-0}}
+\item\relax\sphinxstyleindexentry{musictheory}\sphinxstyleindexpageref{api:\detokenize{module-musictheory}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}

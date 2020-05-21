@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>Learn music theory the hard way! &#8212; musictheory 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="1. Introduction" href="0_intro.html" />
@@ -33,14 +34,16 @@
             
   <div class="section" id="learn-music-theory-the-hard-way">
 <h1>Learn music theory the hard way!<a class="headerlink" href="#learn-music-theory-the-hard-way" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="welcome">
-<h2>Welcome!<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The content on these pages is very much under construction!</p>
+</div>
+<p>Welcome!</p>
 <p>This is not a pedagogical resource for basic music theory concepts
 but an in-depth introduction into the structures of Western music,
 built axiomatically from tones and their relations.
 The logo, a <a class="reference external" href="https://en.wikipedia.org/wiki/Sixty-fourth_note">hemidemisemiquaver</a> (or a sixty-fourth note),
-symbolically reflects this level of difficulty. A PDF version of the contents
-of this page can be found <a class="reference download internal" download="" href="_downloads/bda1f46059e075ccf04076a6e74f242e/musictheory.pdf"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
+symbolically reflects this level of difficulty.</p>
 <p>This project is inspired by a number of great books, e.g.</p>
 <ul class="simple">
 <li><p>Aldwell &amp; Schachter (2010). <em>Harmony and Voice Leading</em>.</p></li>
@@ -50,68 +53,58 @@ of this page can be found <a class="reference download internal" download="" hre
 <li><p>Müller (2015). <em>Fundamentals of Music Processing</em>.</p></li>
 <li><p>Straus (2005). <em>Introduction to Post-Tonal Theory</em>.</p></li>
 </ul>
+<p>What is new and unique about the approach taken here is that we take
+a computational perspective and implement all introduced concepts.
+This does not only provide us with sharp and unequivocal definitions,
+but also allows us to scale music theory up from the analysis of individual
+bars, sections, or pieces to that of entire repertoires and corpora!</p>
 <p>I recently also discovered <a class="reference external" href="https://pedrokroger.net/mfgan/">Music for Geeks and Nerds</a> by Pedro Kroger
 which looks very interesting.
 The Python project <a class="reference external" href="https://github.com/gciruelos/musthe">musthe</a> also seems to pursue a similar goal.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Since this is ongoing work, I can give no guarantee for completeness or accuracy.
 Feel free to <a class="reference external" href="mailto:fabianmoss&#37;&#52;&#48;gmail&#46;com">contact me</a> with your questions and suggestions!</p>
 </div>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="0_intro.html">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="0_intro.html#what-is-cm">1.1. What is CM?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0_intro.html#general-notes">1.2. General notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0_intro.html#notes-old">1.3. Notes (old)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_intro.html#quickstart">1.2. Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_intro.html#notes">1.3. Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_intro.html#acknowledgements">1.4. Acknowledgements</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="1_fundamentals.html">2. Fundamentals</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#tones">2.1. Tones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#intervals">2.2. Intervals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#western-tonal-music">2.3. Western tonal music</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#time">2.4. Time</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="2_sequences.html">3. Modeling musical sequences</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2_sequences.html#schenkerian-theory">3.1. Schenkerian theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_sequences.html#formal-music-models">3.2. Formal music models</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3_representations.html">4. Representations and Formats</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3_representations.html#scores">4.1. Scores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3_representations.html#chords">4.2. Chords</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="4_advanced.html">5. Advanced applications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="4_advanced.html#style-classification">5.1. Style (classification)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4_advanced.html#history">5.2. History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4_advanced.html#performance">5.3. Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#pitch-classes">2.2. Pitch classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#intervals">2.3. Intervals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#pitch-class-sets">2.4. Pitch-Class Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#western-tonal-music">2.5. Western tonal music</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#time">2.6. Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_fundamentals.html#notes-on-segmentation">2.7. Notes on Segmentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
 </div>
 <div class="section" id="developers">
 <h2>Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference - musictheory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api.html#tone">Tone</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#interval">Interval</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
 </div>
 </div>
 
@@ -122,10 +115,12 @@ Feel free to <a class="reference external" href="mailto:fabianmoss&#37;&#52;&#48
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="#">
-              <img class="logo" src="_static/logo2.png" alt="Logo"/>
-            </a></p>
-<h1 class="logo"><a href="#">musictheory</a></h1>
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/logo2.png" alt="Logo"/>
+    
+  </a>
+</p>
 
 
 
@@ -138,20 +133,16 @@ Feel free to <a class="reference external" href="mailto:fabianmoss&#37;&#52;&#48
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="0_intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_fundamentals.html">2. Fundamentals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_sequences.html">3. Modeling musical sequences</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_representations.html">4. Representations and Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_advanced.html">5. Advanced applications</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference - musictheory</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="0_intro.html" title="next chapter">1. Introduction</a></li>
+      <li>Next: <a href="0_intro.html" title="next chapter"><span class="section-number">1. </span>Introduction</a></li>
   </ul></li>
 </ul>
 </div>
@@ -164,7 +155,7 @@ Feel free to <a class="reference external" href="mailto:fabianmoss&#37;&#52;&#48
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -181,7 +172,7 @@ Feel free to <a class="reference external" href="mailto:fabianmoss&#37;&#52;&#48
       &copy;2020, Fabian C. Moss.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

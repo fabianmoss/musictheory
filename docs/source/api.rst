@@ -1,5 +1,16 @@
-API - musictheory
-=================
+API Reference - musictheory
+===========================
 
-.. automodule:: musictheory
+.. module:: musictheory
+
+Tone
+----
+
+.. autoclass:: Tone
+   :members:
+
+Interval
+--------
+
+.. autoclass:: Interval
    :members:

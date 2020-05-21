@@ -67,3 +67,15 @@ General remark: Create excercises with listening, composing and analyzing tasks.
   - different keys (not only treble and bass)
 
   .. bibliography:: references.bib
+
+
+Quickstart
+~~~~~~~~~~
+
+.. warning::
+
+   These instructions do not work yet. 
+
+To install the Python library ``musictheory``, type the following in your terminal::
+
+    pip install musictheory

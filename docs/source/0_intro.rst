@@ -17,7 +17,20 @@ What is CM?
 
 - Music as the "missing Humboldt system" (Merker, 2002) with its "orthogonal discretization of spectro-temporal space" (Merker, 2002:4)
 
-General notes
+Quickstart
+~~~~~~~~~~
+
+.. warning::
+
+   These instructions do not work yet. 
+
+To install the Python library ``musictheory``, type the following in your terminal:
+
+.. code-block:: terminal
+
+    pip install musictheory
+
+Notes
 ~~~~~~~~~~~~~
 
 - Overarching goal is to have an ACCESSIBLE introduction for musicologists with elementary understanding of a programming language such as Python or R. Requirement should be a sound understanding of how functions, loops, and conditionals work.
@@ -28,8 +41,7 @@ General notes
   -- and a list of relevant references
 - the algorithms/methods used in each chapter should be one of the most basic instances of a class of methods. The point is not to have the best classifier, the best dimensionality reduction, the best regression model etc. but rather to understand the class of problems that we are dealing with. Thinking in these abstract problem classes helps to recognize and understand the nature of other problems more easily.
 
-Notes (old)
-~~~~~~~~~~~
+Old:
 
 General remark: Create excercises with listening, composing and analyzing tasks.
 
@@ -66,4 +78,7 @@ General remark: Create excercises with listening, composing and analyzing tasks.
   - modern Western notation
   - different keys (not only treble and bass)
 
-  .. bibliography:: references.bib
+Acknowledgements
+~~~~~~~~~~~~~~~~
+
+- DCML

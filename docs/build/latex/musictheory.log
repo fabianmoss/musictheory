@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.27)  21 MAY 2020 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.27)  21 MAY 2020 14:38
 entering extended mode
 **./musictheory.tex
 (musictheory.tex
@@ -603,8 +603,7 @@ ackend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count284
 \l__pdf_internal_box=\box64
-)
-No file musictheory.aux.
+) (musictheory.aux)
 \openout1 = `musictheory.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
@@ -707,6 +706,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 81.
 LaTeX Info: Redefining \pageref on input line 81.
 LaTeX Info: Redefining \nameref on input line 81.
+ (musictheory.out) (musictheory.out)
 \@outlinefile=\write5
 \openout5 = `musictheory.out'.
 
@@ -750,7 +750,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {C:/Users/fabianmoss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 
-]
+] (musictheory.toc)
 \tf@toc=\write6
 \openout6 = `musictheory.toc'.
 
@@ -769,22 +769,17 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 ]
 Chapter 1.
-[3] [4]
-Chapter 2.
-
-LaTeX Warning: Hyper reference `api:musictheory.Tone' on page 5 undefined on in
-put line 295.
-
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 29
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 17
 5.
 
 ("C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1pcr.
 fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+) [3] [4]
+Chapter 2.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 295.
- [5
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 315.
+[5
 
 ] [6] [7] [8] [9] [10
 
@@ -795,31 +790,21 @@ Chapter 3.
 ]
 Chapter 4.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 621.
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 6
-22.
-
-("C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1pcr
-.fd"
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)
-LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <9> not available
-(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 622.
- [13] [14]
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 635.
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 768.
+(textcomp)                Default family used instead on input line 637.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-68.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+37.
 
 ("C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.f
 d"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-768.
+637.
 
 ("C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmtt.
 fd"
@@ -828,112 +813,121 @@ File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 768.
+(textcomp)                Default family used instead on input line 637.
+
+[13]
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 696.
 
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 827.
+(textcomp)                Default family used instead on input line 696.
 
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 827.
+(textcomp)                Default family used instead on input line 696.
 
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 827.
+(textcomp)                Default family used instead on input line 696.
+
+[14]
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 786.
 
 
 Package textcomp Warning: Symbol \textasciigrave not provided by
 (textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 827.
+(textcomp)                Default family used instead on input line 786.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 816.
+
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 8
+16.
+
+("C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1pcr
+.fd"
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 816.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 816.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 816.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 816.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 816.
 
 [15]
+LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <9> not available
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 853.
+ [16] [17] [18
 
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 917.
-
-
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 917.
-
-[16]
-
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 947.
+] [19
 
 
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 947.
-
-
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 947.
-
-
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 947.
-
-
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 947.
-
-
-Package textcomp Warning: Symbol \textasciigrave not provided by
-(textcomp)                font family pcr in TS1 encoding.
-(textcomp)                Default family used instead on input line 947.
-
-[17] [18
-
-]
-
-LaTeX Warning: Reference `api:module-0' on page 19 undefined on input line 961.
-
-
-[19
+] (musictheory.ind [20
 
 
 ]
-No file musictheory.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 966.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 966.
-(musictheory.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 966.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 966.
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+[]\T1/pcr/m/n/10 get_euclidean_distance() \T1/ptm/m/n/10 (\T1/ptm/m/it/10 mu-si
+c-the-
+ []
 
 
-Package rerunfilecheck Warning: File `musictheory.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+[]\T1/pcr/m/n/10 get_generic_interval() \T1/ptm/m/n/10 (\T1/ptm/m/it/10 mu-sic-
+the-ory.Interval
+ []
 
-Package rerunfilecheck Info: Checksums for `musictheory.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A1EAEE35F1F6F705E3CE7D70C3483315;2037.
-
-LaTeX Warning: There were undefined references.
+[21
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 966.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 960.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 960.
+ (musictheory.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 960.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 960.
+Package rerunfilecheck Info: File `musictheory.out' has not changed.
+(rerunfilecheck)             Checksum: DA60B3A5C8A782C78651E82B87E286B7;2124.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 960.
  ) 
 Here is how much of TeX's memory you used:
- 13628 strings out of 480896
- 199708 string characters out of 2895750
- 481150 words of memory out of 3000000
- 29092 multiletter control sequences out of 15000+200000
+ 13656 strings out of 480896
+ 200452 string characters out of 2895750
+ 483601 words of memory out of 3000000
+ 29109 multiletter control sequences out of 15000+200000
  585190 words of font info for 92 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 38i,20n,49p,556b,675s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,20n,49p,508b,663s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8
 r.enc} <C:\Users\fabianmoss\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
 c/dpi600\tctt0900.pk><C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fon
@@ -957,9 +951,9 @@ anmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C
 8a.pfb><C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmr8a.pfb><C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on musictheory.pdf (23 pages, 221057 bytes).
+Output written on musictheory.pdf (25 pages, 237362 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
