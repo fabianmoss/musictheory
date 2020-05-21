@@ -167,6 +167,10 @@ The *inversion* of a pitch-class set `y` is given by
 
 - Inversion In, Ixy
 
+.. note::
+   Note that this definition is an entirely different concept
+   than *chord inversion* with which we will deal in later chapters.
+
 Index number 
 ~~~~~~~~~~~~
 
