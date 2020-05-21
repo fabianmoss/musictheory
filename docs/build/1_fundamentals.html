@@ -142,27 +142,48 @@ do calculations with pitch classes.</p>
 <h2><span class="section-number">2.4. </span>Pitch-Class Sets<a class="headerlink" href="#pitch-class-sets" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Sets that contain pitch classes</p></li>
+<li><p>ordered: {0,4,7}</p></li>
+<li><p>unordered: {7,0,4}</p></li>
 </ul>
 <div class="section" id="normal-form">
 <h3><span class="section-number">2.4.1. </span>Normal Form<a class="headerlink" href="#normal-form" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>smallest difference between last and first element</p></li>
+<li><p>(see algorithm in Straus,2005)</p></li>
+</ul>
 </div>
 <div class="section" id="transposition">
 <h3><span class="section-number">2.4.2. </span>Transposition<a class="headerlink" href="#transposition" title="Permalink to this headline">¶</a></h3>
+<p>transposition: adding n to each pc (mod 12)</p>
+<ul class="simple">
+<li><p>{0,4,7} + 7 = {7,11,14} = {7,11,2}</p></li>
+</ul>
 </div>
 <div class="section" id="inversion">
 <h3><span class="section-number">2.4.3. </span>Inversion<a class="headerlink" href="#inversion" title="Permalink to this headline">¶</a></h3>
+<p>inversion: reversing the sign of each pc (mod 12)</p>
 <ul class="simple">
+<li><p>[0,4,7] =&gt; [0,-4,-7] = [0,8,5]</p></li>
 <li><p>Inversion In, Ixy</p></li>
 </ul>
 </div>
 <div class="section" id="index-number">
 <h3><span class="section-number">2.4.4. </span>Index number<a class="headerlink" href="#index-number" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Forte numbers: &lt;cardinal number&gt;-&lt;ordinal number&gt;</p></li>
+<li><p>ordinal number is position on the list</p></li>
+<li><p>[0,1,3,6,9] =&gt; 5-31</p></li>
+</ul>
 </div>
 <div class="section" id="set-class">
 <h3><span class="section-number">2.4.5. </span>Set Class<a class="headerlink" href="#set-class" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="prime-form">
 <h3><span class="section-number">2.4.6. </span>Prime Form<a class="headerlink" href="#prime-form" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>0 is first entry</p></li>
+<li><p>220 different pc sets in prime form (equivalence by transposition or inversion)</p></li>
+</ul>
 <p>Transformations between representations of tones are actually <em>transformations of tonal space</em>.</p>
 <p>[Diagram of relations between different representations.]</p>
 </div>

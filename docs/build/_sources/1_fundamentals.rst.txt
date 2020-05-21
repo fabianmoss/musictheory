@@ -127,26 +127,49 @@ Pitch-Class Sets
 ----------------
 
 - Sets that contain pitch classes
+- ordered: {0,4,7}
+- unordered: {7,0,4}
 
 Normal Form 
 ~~~~~~~~~~~
 
+- smallest difference between last and first element
+- (see algorithm in Straus,2005)
+
 Transposition
 ~~~~~~~~~~~~~
 
+transposition: adding n to each pc (mod 12)
+
+- {0,4,7} + 7 = {7,11,14} = {7,11,2}
+
 Inversion
 ~~~~~~~~~
+
+inversion: reversing the sign of each pc (mod 12)
+
+- [0,4,7] => [0,-4,-7] = [0,8,5]
+
 
 - Inversion In, Ixy
 
 Index number 
 ~~~~~~~~~~~~
 
+- Forte numbers: <cardinal number>-<ordinal number>
+
+- ordinal number is position on the list
+- [0,1,3,6,9] => 5-31
+
+
 Set Class
 ~~~~~~~~~
 
 Prime Form 
 ~~~~~~~~~~
+
+- 0 is first entry
+- 220 different pc sets in prime form (equivalence by transposition or inversion)
 
 
 Transformations between representations of tones are actually *transformations of tonal space*.
