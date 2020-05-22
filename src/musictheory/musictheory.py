@@ -283,10 +283,10 @@ class Tone:
         return self.third * "\'" if self.third > 0 else (np.abs(self.third) * "," if self.third < 0 else "_")
 
     def __repr__(self):
-        return f"Tone({self.step+self.accidentals})"
+        return f"Tone({self.step + self.accidentals + self.octave})"
 
     def __str__(self):
-        return self.step + self.accidentals
+        return self.step + self.accidentals + self.octave
 
 
     # def get_pitch_class_chromatic(self, start=0):

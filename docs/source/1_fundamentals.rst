@@ -51,6 +51,13 @@ class for this
 
    t = Tone(o=0, q=0, t=0)
 
+Printing this tone will give us the common name.
+
+.. code-block:: python
+
+   t
+   >>> Tone(C)
+
 From this representation we can derive a variety of others, corrsponding to transformations of 
 tonal space.
 
