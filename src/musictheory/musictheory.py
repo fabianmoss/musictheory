@@ -258,7 +258,7 @@ class Tone:
             >>> t.get_step()
             `C`
         '''
-        return diatonic[ (np.divmod(self.fifths_pos, 7)[1] + 1) % 7 ] # shift 0 to "C"
+        return self.diatonic[ (np.divmod(self.fifths_pos, 7)[1] + 1) % 7 ] # shift 0 to "C"
 
     def get_syntonic(self):
         '''
@@ -281,6 +281,12 @@ class Tone:
             
         '''
         return self.third * "\'" if self.third > 0 else (np.abs(self.third) * "," if self.third < 0 else "_")
+
+    def __repr__(self):
+        return f"Tone({self.step+self.accidentals})"
+
+    def __str__(self):
+        return self.step + self.accidentals
 
 
     # def get_pitch_class_chromatic(self, start=0):
