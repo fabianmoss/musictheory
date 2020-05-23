@@ -18,6 +18,7 @@ class Interval:
         self.generic_interval = self.get_generic_interval()
         self.specific_interval = self.get_specific_interval()
         self.euclidean_distance = self.get_euclidean_distance()
+        self.interval_name = self.get_interval_name()
 
     def get_euclidean_distance(self, precision=2):
         '''
@@ -116,6 +117,29 @@ class Interval:
         else: 
             return np.abs(s)
 
+    def get_interval_name(self, directed=True):
+        if directed:
+            g = self.get_generic_interval(octaves=True)
+            if g < 0:
+                direction = "-"
+            elif g > 0:
+                direction = "+"
+            elif g == 0:
+                direction = "" # does this make sense? => what is the difference between +P1 and -P1?
+        else:
+            direction = ""
+        quality = "Q"
+        size = str(np.abs(self.get_generic_interval(octaves=True)))
+
+        name = direction + quality + size
+        return name
+
+    def __repr__(self):
+        return f"Interval({self.interval_name})"
+
+    def __str__(self):
+        return self.interval_name
+        
 class Tone:
     """ Class for tones. """
 
