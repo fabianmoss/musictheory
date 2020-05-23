@@ -8,6 +8,15 @@
 import numpy as np
 import re
 
+def UnsupportedOperands(op, type1, type2):
+    def as_type(x):
+        return x if isinstance(x, type) else type(x)
+
+    fmt = "unsupported operand type(s) for {}: '{}' and '{}'"
+    type1 = as_type(type1)
+    type2 = as_type(type2)
+    return TypeError(fmt.format(op, type1.__name__, type2.__name__))
+
 class Interval:
     """ Class for an interval between two tones `s` (source) and `t` (target). """
     def __init__(self, source, target):
@@ -134,11 +143,30 @@ class Interval:
         name = direction + quality + size
         return name
 
+    def get_euler_coordinates(self):
+        return self.target - self.source
+
+
     def __repr__(self):
         return f"Interval({self.interval_name})"
 
     def __str__(self):
         return self.interval_name
+
+    # def __sub__(self, other):
+    #     if isinstance(other, Interval):
+    #         return Interval(self.get_euler_coordinates(), - other.get_euler_coordinates())
+    #     else:
+    #         raise UnsupportedOperands('-', self, other)
+
+    # def __add__(self, other):
+    #     if isinstance(other, Interval):
+    #         return Interval(self.get_euler_coordinates(), other.get_euler_coordinates())
+    #     else:
+    #         raise UnsupportedOperands('+', self, other)
+
+
+
         
 class Tone:
     """ Class for tones. """
