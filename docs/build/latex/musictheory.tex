@@ -72,7 +72,7 @@
 
 
 \title{musictheory}
-\date{May 21, 2020}
+\date{May 22, 2020}
 \release{0.0.1}
 \author{Fabian C.\@{} Moss}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -292,6 +292,29 @@ There are many different ways to do this. In fact, the way we specify the locati
 defines the tonal space in which it is situated.
 
 
+\subsection{Euler Space}
+\label{\detokenize{1_fundamentals:euler-space}}
+One option is to locate a tone \sphinxtitleref{t} as a point \(p=(o, q, t)\) in Euler Space, defined by
+a number of octaves \sphinxtitleref{o}, fifths \sphinxtitleref{q}, and thirds \sphinxtitleref{t}. We will use the {\hyperref[\detokenize{api:musictheory.Tone}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{musictheory.Tone}}}}}
+class for this
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{musictheory} \PYG{k+kn}{import} \PYG{n}{Tone}
+
+\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{n}{o}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{q}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{t}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+Printing this tone will give us the common name.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{t}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{Tone}\PYG{p}{(}\PYG{n}{C}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+From this representation we can derive a variety of others, corrsponding to transformations of
+tonal space.
+
+
 \subsection{Frequencies}
 \label{\detokenize{1_fundamentals:frequencies}}
 Each tone corresponds to some \sphinxstyleemphasis{fundamental frequency} \(f\) in Hertz (Hz),
@@ -308,21 +331,13 @@ logarithm: multiplication =\textgreater{} addition
 
 \end{itemize}
 
-
-\subsection{Euler Space}
-\label{\detokenize{1_fundamentals:euler-space}}
-One option is to locate a tone \sphinxtitleref{t} as a point \(p=(o, q, t)\) in Euler Space, defined by
-a number of octaves \sphinxtitleref{o}, fifths \sphinxtitleref{q}, and thirds \sphinxtitleref{t}. We will use the {\hyperref[\detokenize{api:musictheory.Tone}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{musictheory.Tone}}}}}
-class for this
+The frequency of a tone can be accessed via the \DUrole{xref,std,std-ref}{get\_frequency()} method or the \DUrole{xref,std,std-ref}{frequency}
+attribute:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{musictheory} \PYG{k+kn}{import} \PYG{n}{Tone}
-
-\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{n}{o}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{q}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{t}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{n}{t}\PYG{o}{.}\PYG{n}{frequency}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{261.63}
 \end{sphinxVerbatim}
-
-From this representation we can derive a variety of others, corrsponding to transformations of
-tonal space.
 
 
 \subsection{Octave equivalence}

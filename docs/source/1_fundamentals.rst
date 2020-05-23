@@ -1,6 +1,8 @@
 Fundamentals
 ============
 
+.. module:: musictheory
+
 The theory presented in here can be described as a *tonal theory* in the sense 
 that its most fundamental objects are *tones*, discrete musical entities that have
 a certain location in tonal space. 
@@ -28,16 +30,6 @@ conceptualize ("vorstellen" in Riemann's terminology) a *tone location* ("Tonort
 There are many different ways to do this. In fact, the way we specify the location of a tone 
 defines the tonal space in which it is situated.
 
-Frequencies
-~~~~~~~~~~~
-
-Each tone corresponds to some *fundamental frequency* :math:`f` in Hertz (Hz),
-oscillations per second.
-
-- Overtone series
-- frequency ratios 
-- logarithm: multiplication => addition
-
 Euler Space 
 ~~~~~~~~~~~
 
@@ -60,6 +52,24 @@ Printing this tone will give us the common name.
 
 From this representation we can derive a variety of others, corrsponding to transformations of 
 tonal space.
+
+Frequencies
+~~~~~~~~~~~
+
+Each tone corresponds to some *fundamental frequency* :math:`f` in Hertz (Hz),
+oscillations per second.
+
+- Overtone series
+- frequency ratios 
+- logarithm: multiplication => addition
+
+The frequency of a tone can be accessed via the :py:meth:`Tone.get_frequency()` method.
+attribute:
+
+.. code-block:: python
+
+   t.get_frequency()
+   >>> 261.63
 
 Octave equivalence
 ~~~~~~~~~~~~~~~~~~

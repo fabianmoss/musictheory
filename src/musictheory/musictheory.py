@@ -139,6 +139,7 @@ class Tone:
         # other representations
         self.midi_pitch = self.get_midi_pitch()
         self.frequency = self.get_frequency()
+        self.pitch_class = self.get_pitch_class()
 
     def get_accidentals(self):
         '''
@@ -283,10 +284,10 @@ class Tone:
         return self.third * "\'" if self.third > 0 else (np.abs(self.third) * "," if self.third < 0 else "_")
 
     def __repr__(self):
-        return f"Tone({self.step + self.accidentals + self.octave})"
+        return f"Tone({self.step + self.accidentals + str(self.octave) + self.syntonic})"
 
     def __str__(self):
-        return self.step + self.accidentals + self.octave
+        return self.step + self.accidentals + str(self.octave) + self.syntonic
 
 
     # def get_pitch_class_chromatic(self, start=0):

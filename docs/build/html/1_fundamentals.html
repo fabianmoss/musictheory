@@ -33,8 +33,8 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="fundamentals">
-<h1><span class="section-number">2. </span>Fundamentals<a class="headerlink" href="#fundamentals" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-musictheory">
+<span id="fundamentals"></span><h1><span class="section-number">2. </span>Fundamentals<a class="headerlink" href="#module-musictheory" title="Permalink to this headline">¶</a></h1>
 <p>The theory presented in here can be described as a <em>tonal theory</em> in the sense
 that its most fundamental objects are <em>tones</em>, discrete musical entities that have
 a certain location in tonal space.
@@ -57,18 +57,8 @@ Does this tone have a pitch? A duration? A velocity (volume)?</p>
 conceptualize (“vorstellen” in Riemann’s terminology) a <em>tone location</em> (“Tonort”, Mazzola 1985, 241).
 There are many different ways to do this. In fact, the way we specify the location of a tone
 defines the tonal space in which it is situated.</p>
-<div class="section" id="frequencies">
-<h3><span class="section-number">2.1.1. </span>Frequencies<a class="headerlink" href="#frequencies" title="Permalink to this headline">¶</a></h3>
-<p>Each tone corresponds to some <em>fundamental frequency</em> <span class="math notranslate nohighlight">\(f\)</span> in Hertz (Hz),
-oscillations per second.</p>
-<ul class="simple">
-<li><p>Overtone series</p></li>
-<li><p>frequency ratios</p></li>
-<li><p>logarithm: multiplication =&gt; addition</p></li>
-</ul>
-</div>
 <div class="section" id="euler-space">
-<h3><span class="section-number">2.1.2. </span>Euler Space<a class="headerlink" href="#euler-space" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.1. </span>Euler Space<a class="headerlink" href="#euler-space" title="Permalink to this headline">¶</a></h3>
 <p>One option is to locate a tone <cite>t</cite> as a point <span class="math notranslate nohighlight">\(p=(o, q, t)\)</span> in Euler Space, defined by
 a number of octaves <cite>o</cite>, fifths <cite>q</cite>, and thirds <cite>t</cite>. We will use the <a class="reference internal" href="api.html#musictheory.Tone" title="musictheory.Tone"><code class="xref py py-class docutils literal notranslate"><span class="pre">musictheory.Tone</span></code></a>
 class for this</p>
@@ -84,6 +74,22 @@ class for this</p>
 </div>
 <p>From this representation we can derive a variety of others, corrsponding to transformations of
 tonal space.</p>
+</div>
+<div class="section" id="frequencies">
+<h3><span class="section-number">2.1.2. </span>Frequencies<a class="headerlink" href="#frequencies" title="Permalink to this headline">¶</a></h3>
+<p>Each tone corresponds to some <em>fundamental frequency</em> <span class="math notranslate nohighlight">\(f\)</span> in Hertz (Hz),
+oscillations per second.</p>
+<ul class="simple">
+<li><p>Overtone series</p></li>
+<li><p>frequency ratios</p></li>
+<li><p>logarithm: multiplication =&gt; addition</p></li>
+</ul>
+<p>The frequency of a tone can be accessed via the <a class="reference internal" href="api.html#musictheory.Tone.get_frequency" title="musictheory.Tone.get_frequency"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Tone.get_frequency()</span></code></a> method.
+attribute:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">get_frequency</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">261.63</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="octave-equivalence">
 <h3><span class="section-number">2.1.3. </span>Octave equivalence<a class="headerlink" href="#octave-equivalence" title="Permalink to this headline">¶</a></h3>
