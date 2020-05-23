@@ -72,7 +72,7 @@
 
 
 \title{musictheory}
-\date{May 22, 2020}
+\date{May 23, 2020}
 \release{0.0.1}
 \author{Fabian C.\@{} Moss}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -260,7 +260,7 @@ DCML
 
 
 \chapter{Fundamentals}
-\label{\detokenize{1_fundamentals:fundamentals}}\label{\detokenize{1_fundamentals::doc}}
+\label{\detokenize{1_fundamentals:module-musictheory}}\label{\detokenize{1_fundamentals:fundamentals}}\label{\detokenize{1_fundamentals::doc}}\index{module@\spxentry{module}!musictheory@\spxentry{musictheory}}\index{musictheory@\spxentry{musictheory}!module@\spxentry{module}}
 The theory presented in here can be described as a \sphinxstyleemphasis{tonal theory} in the sense
 that its most fundamental objects are \sphinxstyleemphasis{tones}, discrete musical entities that have
 a certain location in tonal space.
@@ -331,11 +331,11 @@ logarithm: multiplication =\textgreater{} addition
 
 \end{itemize}
 
-The frequency of a tone can be accessed via the \DUrole{xref,std,std-ref}{get\_frequency()} method or the \DUrole{xref,std,std-ref}{frequency}
+The frequency of a tone can be accessed via the {\hyperref[\detokenize{api:musictheory.Tone.get_frequency}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Tone.get\_frequency()}}}}} method.
 attribute:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{t}\PYG{o}{.}\PYG{n}{frequency}
+\PYG{n}{t}\PYG{o}{.}\PYG{n}{get\PYGZus{}frequency}\PYG{p}{(}\PYG{p}{)}
 \PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{261.63}
 \end{sphinxVerbatim}
 
