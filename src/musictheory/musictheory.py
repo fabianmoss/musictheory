@@ -149,18 +149,17 @@ class Interval:
     def __str__(self):
         return self.interval_name
 
-    def __sub__(self, other):
-        if isinstance(other, Interval):
-            return Interval(Tone(0,0,0), Tone(*(self.interval - other.interval)))
-        else:
-            raise UnsupportedOperands('-', self, other)
-
     def __add__(self, other):
         if isinstance(other, Interval):
             return Interval(Tone(0,0,0), Tone(*(self.interval + other.interval)))
         else:
             raise UnsupportedOperands('+', self, other)
 
+    def __sub__(self, other):
+        if isinstance(other, Interval):
+            return Interval(Tone(0,0,0), Tone(*(self.interval - other.interval)))
+        else:
+            raise UnsupportedOperands('-', self, other)
         
 class Tone:
     """ Class for tones. """
@@ -335,6 +334,17 @@ class Tone:
     def __str__(self):
         return self.step + self.accidentals + str(self.octave) + self.syntonic
 
+    def __add__(self, other):
+        if isinstance(other, Interval):
+            return Tone(*(self.euler_coordinate + other.interval))
+        else:
+            raise UnsupportedOperands('+', self, other)
+
+    def __sub__(self, other):
+        if isinstance(other, Interval):
+            return Tone(*(self.euler_coordinate - other.interval))
+        else:
+            raise UnsupportedOperands('-', self, other)
 
     # def get_pitch_class_chromatic(self, start=0):
     #     '''Get the pitch class on the tone on the chromatic circle.
