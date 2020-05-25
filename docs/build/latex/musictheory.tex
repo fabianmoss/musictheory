@@ -403,33 +403,32 @@ OPTIC
 We can add an interval to a tone:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} G}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} G}
 
-\PYG{n}{f} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} F}
-\PYG{n}{a} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} A}
-\PYG{n}{i} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,}\PYG{n}{a}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} +M3}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{f} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} F}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{a} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} A}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,}\PYG{n}{a}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} +M3}
 
-\PYG{n}{t} \PYG{o}{+} \PYG{n}{i}
-\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{B}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{t} \PYG{o}{+} \PYG{n}{i}
+\PYG{g+go}{B}
 \end{sphinxVerbatim}
 
 Analogously, we can also substract an interval from a tone:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{t} \PYG{o}{\PYGZhy{}} \PYG{n}{i}
-\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{Eb}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{t} \PYG{o}{\PYGZhy{}} \PYG{n}{i}
+\PYG{g+go}{Eb}
 \end{sphinxVerbatim}
 
 Moreover, we can add or substract intervals from each other:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{j} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{f}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} +m6}
+\PYG{g+go}{\PYGZgt{}\PYGZgt{}\PYGZgt{}j = Interval(a, f) \PYGZsh{} +m6}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i} \PYG{o}{+} \PYG{n}{j}
+\PYG{g+go}{P8}
 
-\PYG{n}{i} \PYG{o}{+} \PYG{n}{j}
-\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{P8}
-
-\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{n}{j}
-\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZhy{}}\PYG{n}{A4}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{n}{j}
+\PYG{g+go}{\PYGZhy{}A4}
 \end{sphinxVerbatim}
 \begin{itemize}
 \item {} 
@@ -680,7 +679,7 @@ Gets the accidentals of the tone (flats (\(\flat\)) or sharps (\(\sharp\)))..
 The accidentals of the tone.
 
 \item[{Return type}] \leavevmode
-str
+\sphinxhref{https://docs.python.org/3/library/stdtypes.html\#str}{str}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -701,10 +700,10 @@ Get the frequency of the tone.
 \begin{quote}\begin{description}
 \item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{chamber\_tone}} (\sphinxstyleliteralemphasis{\sphinxupquote{float}}) \textendash{} The frequency in Hz of the chamber tone. Default: 440.0 (A)
+\sphinxstyleliteralstrong{\sphinxupquote{chamber\_tone}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#float}{\sphinxstyleliteralemphasis{\sphinxupquote{float}}}) \textendash{} The frequency in Hz of the chamber tone. Default: 440.0 (A)
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{precision}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} Rounding precision.
+\sphinxstyleliteralstrong{\sphinxupquote{precision}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{\sphinxstyleliteralemphasis{\sphinxupquote{int}}}) \textendash{} Rounding precision.
 
 \end{itemize}
 
@@ -712,7 +711,7 @@ Get the frequency of the tone.
 The frequency of the tone in Hertz (Hz).
 
 \item[{Return type}] \leavevmode
-float
+\sphinxhref{https://docs.python.org/3/library/functions.html\#float}{float}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -738,7 +737,7 @@ Get the MIDI pitch of the tone.
 The MIDI pitch of the tone if it is in MIDI pitch range (0\textendash{}128)
 
 \item[{Return type}] \leavevmode
-int
+\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{int}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -764,7 +763,7 @@ Gets the complete name of the tone, consisting of its step, syntonic position, a
 The accidentals of the tone.
 
 \item[{Return type}] \leavevmode
-str
+\sphinxhref{https://docs.python.org/3/library/stdtypes.html\#str}{str}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -786,10 +785,10 @@ Get the pitch\sphinxhyphen{}class number on the circle of fifths or the chromati
 \begin{quote}\begin{description}
 \item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{start}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} Pitch\sphinxhyphen{}class number that gets mapped to C (default: 0).
+\sphinxstyleliteralstrong{\sphinxupquote{start}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{\sphinxstyleliteralemphasis{\sphinxupquote{int}}}) \textendash{} Pitch\sphinxhyphen{}class number that gets mapped to C (default: 0).
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{order}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} Return pitch\sphinxhyphen{}class number on the chromatic circle (default) or the circle of fifths.
+\sphinxstyleliteralstrong{\sphinxupquote{order}} (\sphinxhref{https://docs.python.org/3/library/stdtypes.html\#str}{\sphinxstyleliteralemphasis{\sphinxupquote{str}}}) \textendash{} Return pitch\sphinxhyphen{}class number on the chromatic circle (default) or the circle of fifths.
 
 \end{itemize}
 
@@ -797,7 +796,7 @@ Get the pitch\sphinxhyphen{}class number on the circle of fifths or the chromati
 The pitch class of the tone on the circle of fifths or the chromatic circle.
 
 \item[{Return type}] \leavevmode
-int
+\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{int}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -829,7 +828,7 @@ Gets the diatonic letter name (C, D, E, F, G, A, or B) of the tone \sphinxstylee
 The diatonic step of the tone.
 
 \item[{Return type}] \leavevmode
-str
+\sphinxhref{https://docs.python.org/3/library/stdtypes.html\#str}{str}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -857,7 +856,7 @@ and those above or below this line with \sphinxtitleref{‘} or \sphinxtitleref{
 The number of thirds above or below the central C.
 
 \item[{Return type}] \leavevmode
-int
+\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{int}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -891,13 +890,13 @@ Calculates the Euclidean distance between two tones
 with coordinates in Euler space.
 \begin{quote}\begin{description}
 \item[{Parameters}] \leavevmode
-\sphinxstyleliteralstrong{\sphinxupquote{precision}} (\sphinxstyleliteralemphasis{\sphinxupquote{int}}) \textendash{} Rounding precision.
+\sphinxstyleliteralstrong{\sphinxupquote{precision}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{\sphinxstyleliteralemphasis{\sphinxupquote{int}}}) \textendash{} Rounding precision.
 
 \item[{Returns}] \leavevmode
 The Euclidean distance between two tones \sphinxtitleref{s} (source) and \sphinxtitleref{t} (target).
 
 \item[{Return type}] \leavevmode
-float
+\sphinxhref{https://docs.python.org/3/library/functions.html\#float}{float}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -912,6 +911,20 @@ float
 
 \end{fulllineitems}
 
+\index{get\_frequency\_ratio() (musictheory.Interval method)@\spxentry{get\_frequency\_ratio()}\spxextra{musictheory.Interval method}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{api:musictheory.Interval.get_frequency_ratio}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_frequency\_ratio}}}{}{}
+Frequency ratio of the interval.
+Needs \sphinxhref{https://docs.python.org/3/library/fractions.html\#fractions.Fraction}{\sphinxcode{\sphinxupquote{fractions.Fraction}}} class.
+\begin{quote}\begin{description}
+\item[{Returns}] \leavevmode
+Frac \textendash{} Integer ratio of the interval.
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
 \index{get\_generic\_interval() (musictheory.Interval method)@\spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}}
 
 \begin{fulllineitems}
@@ -920,10 +933,10 @@ Generic interval (directed) between two tones.
 \begin{quote}\begin{description}
 \item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} Affects whether the returned interval is directed or not.
+\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#bool}{\sphinxstyleliteralemphasis{\sphinxupquote{bool}}}) \textendash{} Affects whether the returned interval is directed or not.
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} returns generic interval class if \sphinxtitleref{False}.
+\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#bool}{\sphinxstyleliteralemphasis{\sphinxupquote{bool}}}) \textendash{} returns generic interval class if \sphinxtitleref{False}.
 
 \end{itemize}
 
@@ -931,7 +944,7 @@ Generic interval (directed) between two tones.
 (Directed) generic interval from \sphinxtitleref{s} to \sphinxtitleref{t}.
 
 \item[{Return type}] \leavevmode
-int
+\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{int}
 
 \end{description}\end{quote}
 \subsubsection*{Example}
@@ -966,10 +979,10 @@ Specific interval (directed) between two tones.
 \begin{quote}\begin{description}
 \item[{Parameters}] \leavevmode\begin{itemize}
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} Affects whether the returned interval is directed or not.
+\sphinxstyleliteralstrong{\sphinxupquote{directed}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#bool}{\sphinxstyleliteralemphasis{\sphinxupquote{bool}}}) \textendash{} Affects whether the returned interval is directed or not.
 
 \item {} 
-\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxstyleliteralemphasis{\sphinxupquote{bool}}) \textendash{} returns specific interval class if \sphinxtitleref{False}.
+\sphinxstyleliteralstrong{\sphinxupquote{octaves}} (\sphinxhref{https://docs.python.org/3/library/functions.html\#bool}{\sphinxstyleliteralemphasis{\sphinxupquote{bool}}}) \textendash{} returns specific interval class if \sphinxtitleref{False}.
 
 \end{itemize}
 
@@ -977,7 +990,7 @@ Specific interval (directed) between two tones.
 (Directed) specific interval from \sphinxtitleref{s} to \sphinxtitleref{t}.
 
 \item[{Return type}] \leavevmode
-int
+\sphinxhref{https://docs.python.org/3/library/functions.html\#int}{int}
 
 \end{description}\end{quote}
 \subsubsection*{Example}

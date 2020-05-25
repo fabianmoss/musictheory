@@ -39,5 +39,5 @@
 \contentsline {section}{\numberline {4.1}API Reference \sphinxhyphen {} musictheory}{13}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Tone}{13}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Interval}{15}{subsection.4.1.2}%
-\contentsline {chapter}{Python Module Index}{19}{section*.15}%
-\contentsline {chapter}{Index}{21}{section*.16}%
+\contentsline {chapter}{Python Module Index}{19}{section*.16}%
+\contentsline {chapter}{Index}{21}{section*.17}%

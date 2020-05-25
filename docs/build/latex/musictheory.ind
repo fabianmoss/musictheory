@@ -8,6 +8,7 @@
   \item \spxentry{get\_accidentals()}\spxextra{musictheory.Tone method}, \hyperpage{13}
   \item \spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}, \hyperpage{15}
   \item \spxentry{get\_frequency()}\spxextra{musictheory.Tone method}, \hyperpage{13}
+  \item \spxentry{get\_frequency\_ratio()}\spxextra{musictheory.Interval method}, \hyperpage{16}
   \item \spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}, \hyperpage{16}
   \item \spxentry{get\_midi\_pitch()}\spxextra{musictheory.Tone method}, \hyperpage{14}
   \item \spxentry{get\_name()}\spxextra{musictheory.Tone method}, \hyperpage{14}

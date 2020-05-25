@@ -12,5 +12,6 @@
 \indexentry{get\_syntonic() (musictheory.Tone method)@\spxentry{get\_syntonic()}\spxextra{musictheory.Tone method}|hyperpage}{15}
 \indexentry{Interval (class in musictheory)@\spxentry{Interval}\spxextra{class in musictheory}|hyperpage}{15}
 \indexentry{get\_euclidean\_distance() (musictheory.Interval method)@\spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}|hyperpage}{15}
+\indexentry{get\_frequency\_ratio() (musictheory.Interval method)@\spxentry{get\_frequency\_ratio()}\spxextra{musictheory.Interval method}|hyperpage}{16}
 \indexentry{get\_generic\_interval() (musictheory.Interval method)@\spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}|hyperpage}{16}
 \indexentry{get\_specific\_interval() (musictheory.Interval method)@\spxentry{get\_specific\_interval()}\spxextra{musictheory.Interval method}|hyperpage}{16}

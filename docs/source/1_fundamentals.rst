@@ -41,7 +41,7 @@ class for this
 
    from musictheory import Tone
 
-   t = Tone(o=0, q=0, t=0)
+   t = Tone(octave=0, fifth=0, third=0)
 
 Printing this tone will give us the common name.
 
@@ -141,33 +141,32 @@ We can add an interval to a tone:
 
 .. code::
 
-   t = Tone(0,1,0) # G 
+   >>> t = Tone(0,1,0) # G 
    
-   f = Tone(0,-1,0) # F 
-   a = Tone(0,-1,1) # A 
-   i = Interval(f,a) # +M3
+   >>> f = Tone(0,-1,0) # F 
+   >>> a = Tone(0,-1,1) # A 
+   >>> i = Interval(f,a) # +M3
 
-   t + i 
-   >>> B 
+   >>> t + i 
+   B 
 
 Analogously, we can also substract an interval from a tone: 
 
 .. code::
 
-   t - i
-   >>> Eb
+   >>> t - i
+   Eb
 
 Moreover, we can add or substract intervals from each other: 
 
 .. code::
 
-   j = Interval(a, f) # +m6
+   >>>j = Interval(a, f) # +m6
+   >>> i + j 
+   P8 
 
-   i + j 
-   >>> P8 
-
-   i - j 
-   >>> -A4
+   >>> i - j 
+   -A4
 
 - Pitch intervals
 - Ordered pitch-class intervals (-> rather directed)
