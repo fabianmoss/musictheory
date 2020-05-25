@@ -3,20 +3,17 @@ import numpy as np
 
 if __name__ == "__main__":
     c = Tone(0,0,0)
-    s = Tone(0,1,0) 
-    t = Tone(0,2,1) 
+    s = Tone(1,-1,1) 
+    t = Tone(0,2,0) 
     i = Interval(source=c,target=s)
-    j = Interval(source=s, target=t)
+    j = Interval(source=c, target=t)
     
-    print(c)
-    print(c.euler_coordinate)
-    print(j)
-    print(j.euler_coordinate)
-    print(-j.euler_coordinate)
+    print(i.get_frequency_ratio())
 
-    print(c + j, c - j)
-    print(i+j, i-j)
-    print(i.frequency_ratio)
+    # print(c + j, c - j)
+    # print(i+j, i-j)
+    # print(i.get_frequency_ratio())
+    # print(i.frequency_ratio)
 
     # print(s.label, t.label)
     # print(i.interval)

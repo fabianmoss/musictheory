@@ -103,13 +103,22 @@ class Interval:
         Returns:
             Frac -- Integer ratio of the interval.
         """
-        num = 2 ** self.source.euler_coordinate[0] * \
-              3 ** self.source.euler_coordinate[1] * \
-              5 ** self.source.euler_coordinate[2]
-        den = 2 ** self.target.euler_coordinate[0] * \
-              3 ** self.target.euler_coordinate[1] * \
-              5 ** self.target.euler_coordinate[2]
+
+        num = Fraction(2, 1) ** self.target.euler_coordinate[0] * \
+              Fraction(3, 2) ** self.target.euler_coordinate[1] * \
+              Fraction(5, 4) ** self.target.euler_coordinate[2]
+
+        den = Fraction(2, 1) ** self.source.euler_coordinate[0] * \
+            Fraction(3, 2) ** self.source.euler_coordinate[1] * \
+            Fraction(5, 4) ** self.source.euler_coordinate[2]
+
         return Fraction(num, den)
+
+        # Remove greatest common divisor:
+        # common_divisor = gcd(numer, denom)
+        # (reduced_num, reduced_den) = (numer / common_divisor, denom / common_divisor)
+        
+        # return np.gcd.reduce(num, den) #Fraction(num, den)
     
     def get_specific_interval(self, directed=True, octaves=True):
         """
@@ -134,7 +143,7 @@ class Interval:
             5
 
         """
-        s = (((12 * self.euler_coordinate[0]) + 7 * self.euler_coordinate[1] % 12) + (4 * self.euler_coordinate[2] % 12))
+        s = (12 * self.euler_coordinate[0]) + 7 * (self.euler_coordinate[1] % 12) + (4 * self.euler_coordinate[2] % 12)
         if not octaves:
             s = s % 12
 
@@ -150,8 +159,9 @@ class Interval:
                 direction = "-"
             elif g > 0:
                 direction = "+"
-            elif g == 0:
-                direction = "" # does this make sense? => what is the difference between +P1 and -P1?
+            # elif g == 0:
+            #     direction = "" # does this make sense? => what is the difference between +P1 and -P1?
+                ## P1 is the neutral element of the interval group! Directed intervals must be signed!
         else:
             direction = ""
         quality = "Q"
