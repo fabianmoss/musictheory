@@ -82,8 +82,61 @@ tonal space.</p>
 <p>Tone triples can be assigned a more-readable label, e.g. <code class="docutils literal notranslate"><span class="pre">C4'</span></code>, <code class="docutils literal notranslate"><span class="pre">Dbb2,,</span></code>.</p>
 <p>Regular expression: <code class="regexp docutils literal notranslate"><span class="pre">[A-G](#|b)*d(,|')+</span></code>.</p>
 </div>
+<div class="section" id="equivalences">
+<h3><span class="section-number">2.1.2. </span>Equivalences<a class="headerlink" href="#equivalences" title="Permalink to this headline">¶</a></h3>
+<p>OPTIC</p>
+<div class="section" id="octave-equivalence">
+<h4><span class="section-number">2.1.2.1. </span>Octave equivalence<a class="headerlink" href="#octave-equivalence" title="Permalink to this headline">¶</a></h4>
+<p>Octave equivalance considers all tones to be equivalent that are separated by one or
+multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
+are related by multiples of 2 are octave equivalent.</p>
+<div class="math notranslate nohighlight">
+\[\pi: (o, q, t) \mapsto (q, t).\]</div>
+<p>The <em>Tonnetz</em> does not contain octaves…</p>
+<p>[tikz Tonnetz]</p>
+</div>
+<div class="section" id="pythagorean">
+<h4><span class="section-number">2.1.2.2. </span>Pythagorean<a class="headerlink" href="#pythagorean" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}\pi: \qquad \mathbb{Z}^3 &amp;\rightarrow \mathbb{Z} \\
+(o, q, t) &amp;\mapsto q\end{split}\]</div>
+<p>This mapping projects all tones on to the <cite>line of fifths</cite> (Riemann, 1900; Temperley, 2000).</p>
+<p>[tikz: line of fifth]</p>
+</div>
+<div class="section" id="enharmonic-equivalence">
+<h4><span class="section-number">2.1.2.3. </span>Enharmonic equivalence<a class="headerlink" href="#enharmonic-equivalence" title="Permalink to this headline">¶</a></h4>
+<p>If, in addition to octave equivalence, one further assumes enharmonic equivalence,
+all tones separated by 12 fifths on the line of fifths
+are considered to be equivalent, e.g. <span class="math notranslate nohighlight">\(\text{A}\sharp\)</span> and <span class="math notranslate nohighlight">\(\text{B}\flat\)</span>,
+<span class="math notranslate nohighlight">\(\text{F}\sharp\)</span> and <span class="math notranslate nohighlight">\(\text{G}\flat\)</span>, <span class="math notranslate nohighlight">\(\text{G}\sharp\)</span>, and <span class="math notranslate nohighlight">\(\text{A}\flat\)</span> etc.</p>
+<p>The notion of a pitch class usually entails both octave and enharmonic equivalence.
+Consequently, there are twelve pitch classes. If not mentioned otherwise, we adopt this convention here.
+The twelve pitch classes are usually referred to by their most simple representatives, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\text{C, C$\sharp$, D, E$\flat$, F, F$\sharp$, G, A$\flat$, A, B$\flat$, B},\]</div>
+<p>but it is more appropriate to use <em>integer notation</em> in which each pitch class is represented
+by an integer <span class="math notranslate nohighlight">\(k \in \mathbb{Z}_{12}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{Z}_{12}=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\},\]</div>
+<p>and usually one sets <span class="math notranslate nohighlight">\(0\equiv \text{C}\)</span>. This allows to use <em>modular arithmetic</em>
+do calculations with pitch classes.</p>
+<div class="math notranslate nohighlight">
+\[\pi: (o, q, t) \mapsto 7 \cdot q + 4 \cdot t \mod 12\]</div>
+<p>[tikz: Chromatic circle]</p>
+<p>Reordering pitch classes along the circle of fifths is achieved via the mapping</p>
+<div class="math notranslate nohighlight">
+\[t \mapsto 7 \cdot t \mod 12\]</div>
+<p>[tikz circle of fifths]</p>
+</div>
+<div class="section" id="pitch-classes">
+<h4><span class="section-number">2.1.2.4. </span>Pitch classes<a class="headerlink" href="#pitch-classes" title="Permalink to this headline">¶</a></h4>
+<p>A very common object in music theory is that of a <em>pitch class</em>. Pitch classes
+are equivalence classes of tones that incorporate some kind of invariance.
+The two most common equivalences are <em>octave equivalence</em> and <em>enharmonic equivalence</em>.</p>
+</div>
+</div>
 <div class="section" id="frequencies">
-<h3><span class="section-number">2.1.2. </span>Frequencies<a class="headerlink" href="#frequencies" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3. </span>Frequencies<a class="headerlink" href="#frequencies" title="Permalink to this headline">¶</a></h3>
 <p>Each tone corresponds to some <em>fundamental frequency</em> <span class="math notranslate nohighlight">\(f\)</span> in Hertz (Hz),
 oscillations per second.</p>
 <ul class="simple">
@@ -100,53 +153,18 @@ number of the tone in questions, then</p>
 <p>The frequency of a tone can be accessed via the <a class="reference internal" href="api.html#musictheory.Tone.get_frequency" title="musictheory.Tone.get_frequency"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Tone.get_frequency()</span></code></a> method.
 attribute:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">get_frequency</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mf">261.63</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">392.0</span>
 </pre></div>
 </div>
 <p>Changing the chamber tone will, of course, change the frequency for each tone:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">get_frequency</span><span class="p">(</span><span class="n">chamber_tone</span><span class="o">=</span><span class="mf">442.0</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mf">392.0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">393.78</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="octave-equivalence">
-<h3><span class="section-number">2.1.3. </span>Octave equivalence<a class="headerlink" href="#octave-equivalence" title="Permalink to this headline">¶</a></h3>
-<p>Octave equivalance considers all tones to be equivalent that are separated by one or
-multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
-are related by multiples of 2 are octave equivalent.</p>
-</div>
-<div class="section" id="tonnetz">
-<h3><span class="section-number">2.1.4. </span>Tonnetz<a class="headerlink" href="#tonnetz" title="Permalink to this headline">¶</a></h3>
-<p>The <em>Tonnetz</em> does not contain octaves and thus corresponds to a projection</p>
-<div class="math notranslate nohighlight">
-\[\pi: (o, q, t) \mapsto (q, t).\]</div>
-</div>
-</div>
-<div class="section" id="pitch-classes">
-<h2><span class="section-number">2.2. </span>Pitch classes<a class="headerlink" href="#pitch-classes" title="Permalink to this headline">¶</a></h2>
-<p>A very common object in music theory is that of a <em>pitch class</em>. Pitch classes
-are equivalence classes of tones that incorporate some kind of invariance.
-The two most common equivalences are <em>octave equivalence</em> and <em>enharmonic equivalence</em>.</p>
-<div class="section" id="enharmonic-equivalence">
-<h3><span class="section-number">2.2.1. </span>Enharmonic equivalence<a class="headerlink" href="#enharmonic-equivalence" title="Permalink to this headline">¶</a></h3>
-<p>If, in addition to octave equivalence, one further assumes enharmonic equivalence,
-all tones separated by 12 fifths on the line of fifths
-are considered to be equivalent, e.g. <span class="math notranslate nohighlight">\(\text{A}\sharp\)</span> and <span class="math notranslate nohighlight">\(\text{B}\flat\)</span>,
-<span class="math notranslate nohighlight">\(\text{F}\sharp\)</span> and <span class="math notranslate nohighlight">\(\text{G}\flat\)</span>, <span class="math notranslate nohighlight">\(\text{G}\sharp\)</span>, and <span class="math notranslate nohighlight">\(\text{A}\flat\)</span> etc.</p>
-<p>The notion of a pitch class usually entails both octave and enharmonic equivalence.
-Consequently, there are twelve pitch classes. If not mentioned otherwise, we adopt this convention here.
-The twelve pitch classes are usually referred to by their most simple representatives, i.e.</p>
-<div class="math notranslate nohighlight">
-\[\text{C, C$\sharp$, D, E$\flat$, F, F$\sharp$, G, A$\flat$, A, B$\flat$, B},\]</div>
-<p>but it is more appropriate to use <em>integer notation</em> in which each pitch class is represented
-by an integer <span class="math notranslate nohighlight">\(k \in \mathbb{Z}_{12}\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\mathbb{Z}_{12}=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\},\]</div>
-<p>and usually one sets <span class="math notranslate nohighlight">\(0\equiv \text{C}\)</span>. This allows to use <em>modular arithmetic</em>
-do calculations with pitch classes.</p>
+<p>The <cite>Tone.frequency</cite> attribute is always calculated with respect to a chamber tone of 440Hz.</p>
 </div>
 <div class="section" id="midi">
-<h3><span class="section-number">2.2.2. </span>MIDI<a class="headerlink" href="#midi" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.4. </span>MIDI<a class="headerlink" href="#midi" title="Permalink to this headline">¶</a></h3>
 <p>The Musical Instrument Digital Interface format (<a class="reference external" href="https://de.wikipedia.org/wiki/Musical_Instrument_Digital_Interface">MIDI</a>) was developed to communicate
 between electronic musical instruments. Each pitch class (assuming enharmonic but not
 octave equivalence) is represented by an integer between 0 and 127, and the MIDI number
@@ -158,16 +176,12 @@ the MIDI pitch for the tonal center (60).</p>
 <div class="math notranslate nohighlight">
 \[m = 60 + 12 \cdot o + 7 \cdot f + 4 \cdot t\]</div>
 </div>
-<div class="section" id="other-invariances">
-<h3><span class="section-number">2.2.3. </span>Other invariances<a class="headerlink" href="#other-invariances" title="Permalink to this headline">¶</a></h3>
-<p>OPTIC</p>
-</div>
 <div class="section" id="tuning-temperament">
-<h3><span class="section-number">2.2.4. </span>Tuning / Temperament<a class="headerlink" href="#tuning-temperament" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.5. </span>Tuning / Temperament<a class="headerlink" href="#tuning-temperament" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="intervals">
-<h2><span class="section-number">2.3. </span>Intervals<a class="headerlink" href="#intervals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Intervals<a class="headerlink" href="#intervals" title="Permalink to this headline">¶</a></h2>
 <p>We can add an interval to a tone:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># G</span>
 
@@ -203,11 +217,11 @@ the MIDI pitch for the tonal center (60).</p>
 <li><p>Interval-class vector</p></li>
 </ul>
 <div class="section" id="giss">
-<h3><span class="section-number">2.3.1. </span>GISs<a class="headerlink" href="#giss" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1. </span>GISs<a class="headerlink" href="#giss" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="pitch-class-sets">
-<h2><span class="section-number">2.4. </span>Pitch-Class Sets<a class="headerlink" href="#pitch-class-sets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Pitch-Class Sets<a class="headerlink" href="#pitch-class-sets" title="Permalink to this headline">¶</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(y=\{y_1,\ldots,y_m\}\)</span> be a pitch-class set.</p>
 <ul class="simple">
 <li><p>Sets that contain pitch classes</p></li>
@@ -215,14 +229,14 @@ the MIDI pitch for the tonal center (60).</p>
 <li><p>unordered: {7,0,4}</p></li>
 </ul>
 <div class="section" id="normal-form">
-<h3><span class="section-number">2.4.1. </span>Normal Form<a class="headerlink" href="#normal-form" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.1. </span>Normal Form<a class="headerlink" href="#normal-form" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>smallest difference between last and first element</p></li>
 <li><p>(see algorithm in Straus,2005)</p></li>
 </ul>
 </div>
 <div class="section" id="transposition">
-<h3><span class="section-number">2.4.2. </span>Transposition<a class="headerlink" href="#transposition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2. </span>Transposition<a class="headerlink" href="#transposition" title="Permalink to this headline">¶</a></h3>
 <p>transposition: adding n to each pc (mod 12)</p>
 <ul class="simple">
 <li><p>{0,4,7} + 7 = {7,11,14} = {7,11,2}</p></li>
@@ -233,7 +247,7 @@ the MIDI pitch for the tonal center (60).</p>
        &amp;= \{y_1 + n\mod~12, \ldots, y_m + n\mod~12\}\end{split}\]</div>
 </div>
 <div class="section" id="inversion">
-<h3><span class="section-number">2.4.3. </span>Inversion<a class="headerlink" href="#inversion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.3. </span>Inversion<a class="headerlink" href="#inversion" title="Permalink to this headline">¶</a></h3>
 <p>inversion: reversing the sign of each pc (mod 12)</p>
 <ul class="simple">
 <li><p>[0,4,7] =&gt; [0,-4,-7] = [0,8,5]</p></li>
@@ -252,7 +266,7 @@ than <em>chord inversion</em> with which we will deal in later chapters.</p>
 </div>
 </div>
 <div class="section" id="index-number">
-<h3><span class="section-number">2.4.4. </span>Index number<a class="headerlink" href="#index-number" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.4. </span>Index number<a class="headerlink" href="#index-number" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Forte numbers: &lt;cardinal number&gt;-&lt;ordinal number&gt;</p></li>
 <li><p>ordinal number is position on the list</p></li>
@@ -260,10 +274,10 @@ than <em>chord inversion</em> with which we will deal in later chapters.</p>
 </ul>
 </div>
 <div class="section" id="set-class">
-<h3><span class="section-number">2.4.5. </span>Set Class<a class="headerlink" href="#set-class" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.5. </span>Set Class<a class="headerlink" href="#set-class" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="prime-form">
-<h3><span class="section-number">2.4.6. </span>Prime Form<a class="headerlink" href="#prime-form" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.6. </span>Prime Form<a class="headerlink" href="#prime-form" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>0 is first entry</p></li>
 <li><p>220 different pc sets in prime form (equivalence by transposition or inversion)</p></li>
@@ -273,7 +287,7 @@ than <em>chord inversion</em> with which we will deal in later chapters.</p>
 </div>
 </div>
 <div class="section" id="the-diatonic-scale">
-<h2><span class="section-number">2.5. </span>The diatonic scale<a class="headerlink" href="#the-diatonic-scale" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>The diatonic scale<a class="headerlink" href="#the-diatonic-scale" title="Permalink to this headline">¶</a></h2>
 <p>Music in the Western tradition fundamentally builds on
 so-called <em>diatonic</em> scales, an arrangement of seven tones
 that are named with latin letters from A to G. “Diatonic” can
@@ -297,12 +311,12 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
 \text{C}: \hat{7}\\\end{split}\]</div>
 </div>
 <div class="section" id="other-scales">
-<h2><span class="section-number">2.6. </span>Other scales<a class="headerlink" href="#other-scales" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Other scales<a class="headerlink" href="#other-scales" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="pentatonic">
-<h3><span class="section-number">2.6.1. </span>Pentatonic<a class="headerlink" href="#pentatonic" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.1. </span>Pentatonic<a class="headerlink" href="#pentatonic" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="scales-based-on-chromaticism">
-<h3><span class="section-number">2.6.2. </span>Scales based on chromaticism<a class="headerlink" href="#scales-based-on-chromaticism" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.2. </span>Scales based on chromaticism<a class="headerlink" href="#scales-based-on-chromaticism" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>chromatic</p></li>
 <li><p>hexatonic</p></li>
@@ -312,7 +326,7 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
 </div>
 </div>
 <div class="section" id="modes">
-<h2><span class="section-number">2.7. </span>Modes<a class="headerlink" href="#modes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>Modes<a class="headerlink" href="#modes" title="Permalink to this headline">¶</a></h2>
 <p>scale plus order plus hierarchy (but order already defined above?)</p>
 <p>Different terminologies:</p>
 <ul class="simple">
@@ -323,29 +337,29 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
 </ul>
 </div>
 <div class="section" id="keys">
-<h2><span class="section-number">2.8. </span>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7. </span>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="time">
-<h2><span class="section-number">2.9. </span>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8. </span>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="notes">
-<h3><span class="section-number">2.9.1. </span>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.8.1. </span>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
 <p>(Tones + Duration)
 blablabla…</p>
 </div>
 <div class="section" id="rhythm">
-<h3><span class="section-number">2.9.2. </span>Rhythm<a class="headerlink" href="#rhythm" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.8.2. </span>Rhythm<a class="headerlink" href="#rhythm" title="Permalink to this headline">¶</a></h3>
 <p>(Duration patterns)</p>
 </div>
 <div class="section" id="meter">
-<h3><span class="section-number">2.9.3. </span>Meter<a class="headerlink" href="#meter" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.8.3. </span>Meter<a class="headerlink" href="#meter" title="Permalink to this headline">¶</a></h3>
 <p>(Hierarchy)</p>
 </div>
 <div class="section" id="musical-time-vs-performance-time">
-<h3><span class="section-number">2.9.4. </span>Musical time vs. performance time<a class="headerlink" href="#musical-time-vs-performance-time" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.8.4. </span>Musical time vs. performance time<a class="headerlink" href="#musical-time-vs-performance-time" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="notes-on-segmentation">
-<h2><span class="section-number">2.10. </span>Notes on Segmentation<a class="headerlink" href="#notes-on-segmentation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.9. </span>Notes on Segmentation<a class="headerlink" href="#notes-on-segmentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Straus 2005</p></li>
 <li><p>Hanninen 2012</p></li>
@@ -379,15 +393,14 @@ blablabla…</p>
 <li class="toctree-l1"><a class="reference internal" href="0_intro.html">1. Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Fundamentals</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tones">2.1. Tones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pitch-classes">2.2. Pitch classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#intervals">2.3. Intervals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pitch-class-sets">2.4. Pitch-Class Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-diatonic-scale">2.5. The diatonic scale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#other-scales">2.6. Other scales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#modes">2.7. Modes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#keys">2.8. Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#time">2.9. Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#notes-on-segmentation">2.10. Notes on Segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#intervals">2.2. Intervals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pitch-class-sets">2.3. Pitch-Class Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-diatonic-scale">2.4. The diatonic scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-scales">2.5. Other scales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modes">2.6. Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keys">2.7. Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#time">2.8. Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-segmentation">2.9. Notes on Segmentation</a></li>
 </ul>
 </li>
 </ul>

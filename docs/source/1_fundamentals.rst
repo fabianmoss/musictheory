@@ -64,6 +64,82 @@ Tone triples can be assigned a more-readable label, e.g. ``C4'``, ``Dbb2,,``.
 
 Regular expression: :regexp:`[A-G](#|b)*\d(,|')+`.
 
+Equivalences
+~~~~~~~~~~~~
+
+OPTIC
+
+Octave equivalence
+++++++++++++++++++
+
+Octave equivalance considers all tones to be equivalent that are separated by one or
+multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
+are related by multiples of 2 are octave equivalent.
+
+.. math::
+   
+   \pi: (o, q, t) \mapsto (q, t).
+
+The *Tonnetz* does not contain octaves...
+
+[tikz Tonnetz]
+
+Pythagorean
++++++++++++
+
+.. math:: 
+   \pi: \qquad \mathbb{Z}^3 &\rightarrow \mathbb{Z} \\
+   (o, q, t) &\mapsto q
+
+This mapping projects all tones on to the `line of fifths` (Riemann, 1900; Temperley, 2000).
+
+[tikz: line of fifth]
+
+Enharmonic equivalence
+++++++++++++++++++++++
+
+If, in addition to octave equivalence, one further assumes enharmonic equivalence, 
+all tones separated by 12 fifths on the line of fifths
+are considered to be equivalent, e.g. :math:`\text{A}\sharp` and :math:`\text{B}\flat`, 
+:math:`\text{F}\sharp` and :math:`\text{G}\flat`, :math:`\text{G}\sharp`, and :math:`\text{A}\flat` etc.
+
+The notion of a pitch class usually entails both octave and enharmonic equivalence.
+Consequently, there are twelve pitch classes. If not mentioned otherwise, we adopt this convention here.
+The twelve pitch classes are usually referred to by their most simple representatives, i.e.
+
+.. math::
+   \text{C, C$\sharp$, D, E$\flat$, F, F$\sharp$, G, A$\flat$, A, B$\flat$, B},
+
+but it is more appropriate to use *integer notation* in which each pitch class is represented
+by an integer :math:`k \in \mathbb{Z}_{12}`.
+
+.. math::
+   \mathbb{Z}_{12}=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\},
+
+and usually one sets :math:`0\equiv \text{C}`. This allows to use *modular arithmetic*
+do calculations with pitch classes.
+
+.. math::
+
+   \pi: (o, q, t) \mapsto 7 \cdot q + 4 \cdot t \mod 12
+
+[tikz: Chromatic circle]
+
+Reordering pitch classes along the circle of fifths is achieved via the mapping
+
+.. math::
+
+   t \mapsto 7 \cdot t \mod 12
+
+[tikz circle of fifths]
+
+Pitch classes
++++++++++++++
+
+A very common object in music theory is that of a *pitch class*. Pitch classes
+are equivalence classes of tones that incorporate some kind of invariance.
+The two most common equivalences are *octave equivalence* and *enharmonic equivalence*.
+
 Frequencies
 ~~~~~~~~~~~
 
@@ -97,53 +173,7 @@ Changing the chamber tone will, of course, change the frequency for each tone:
    t.get_frequency(chamber_tone=442.0)
    >>> 393.78
 
-Octave equivalence
-~~~~~~~~~~~~~~~~~~
-
-Octave equivalance considers all tones to be equivalent that are separated by one or
-multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
-are related by multiples of 2 are octave equivalent.
-
-Tonnetz
-~~~~~~~
-
-The *Tonnetz* does not contain octaves and thus corresponds to a projection 
-
-.. math::
-   
-   \pi: (o, q, t) \mapsto (q, t).
-
-Pitch classes
--------------
-
-A very common object in music theory is that of a *pitch class*. Pitch classes
-are equivalence classes of tones that incorporate some kind of invariance.
-The two most common equivalences are *octave equivalence* and *enharmonic equivalence*.
-
-
-Enharmonic equivalence
-~~~~~~~~~~~~~~~~~~~~~~
-
-If, in addition to octave equivalence, one further assumes enharmonic equivalence, 
-all tones separated by 12 fifths on the line of fifths
-are considered to be equivalent, e.g. :math:`\text{A}\sharp` and :math:`\text{B}\flat`, 
-:math:`\text{F}\sharp` and :math:`\text{G}\flat`, :math:`\text{G}\sharp`, and :math:`\text{A}\flat` etc.
-
-The notion of a pitch class usually entails both octave and enharmonic equivalence.
-Consequently, there are twelve pitch classes. If not mentioned otherwise, we adopt this convention here.
-The twelve pitch classes are usually referred to by their most simple representatives, i.e.
-
-.. math::
-   \text{C, C$\sharp$, D, E$\flat$, F, F$\sharp$, G, A$\flat$, A, B$\flat$, B},
-
-but it is more appropriate to use *integer notation* in which each pitch class is represented
-by an integer :math:`k \in \mathbb{Z}_{12}`.
-
-.. math::
-   \mathbb{Z}_{12}=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\},
-
-and usually one sets :math:`0\equiv \text{C}`. This allows to use *modular arithmetic*
-do calculations with pitch classes.
+The `Tone.frequency` attribute is always calculated with respect to a chamber tone of 440Hz.
 
 MIDI
 ~~~~
@@ -162,11 +192,6 @@ the MIDI pitch for the tonal center (60).
 .. math::
    
    m = 60 + 12 \cdot o + 7 \cdot f + 4 \cdot t
-
-Other invariances
-~~~~~~~~~~~~~~~~~
-
-OPTIC
 
 Tuning / Temperament
 ~~~~~~~~~~~~~~~~~~~~~~~

@@ -327,6 +327,73 @@ Tone triples can be assigned a more\sphinxhyphen{}readable label, e.g. \sphinxco
 Regular expression: \sphinxcode{\sphinxupquote{{[}A\sphinxhyphen{}G{]}(\#|b)*d(,|\textquotesingle{})+}}.
 
 
+\subsection{Equivalences}
+\label{\detokenize{1_fundamentals:equivalences}}
+OPTIC
+
+
+\subsubsection{Octave equivalence}
+\label{\detokenize{1_fundamentals:octave-equivalence}}
+Octave equivalance considers all tones to be equivalent that are separated by one or
+multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
+are related by multiples of 2 are octave equivalent.
+\begin{equation*}
+\begin{split}\pi: (o, q, t) \mapsto (q, t).\end{split}
+\end{equation*}
+The \sphinxstyleemphasis{Tonnetz} does not contain octaves…
+
+{[}tikz Tonnetz{]}
+
+
+\subsubsection{Pythagorean}
+\label{\detokenize{1_fundamentals:pythagorean}}\begin{equation*}
+\begin{split}\pi: \qquad \mathbb{Z}^3 &\rightarrow \mathbb{Z} \\
+(o, q, t) &\mapsto q\end{split}
+\end{equation*}
+This mapping projects all tones on to the \sphinxtitleref{line of fifths} (Riemann, 1900; Temperley, 2000).
+
+{[}tikz: line of fifth{]}
+
+
+\subsubsection{Enharmonic equivalence}
+\label{\detokenize{1_fundamentals:enharmonic-equivalence}}
+If, in addition to octave equivalence, one further assumes enharmonic equivalence,
+all tones separated by 12 fifths on the line of fifths
+are considered to be equivalent, e.g. \(\text{A}\sharp\) and \(\text{B}\flat\),
+\(\text{F}\sharp\) and \(\text{G}\flat\), \(\text{G}\sharp\), and \(\text{A}\flat\) etc.
+
+The notion of a pitch class usually entails both octave and enharmonic equivalence.
+Consequently, there are twelve pitch classes. If not mentioned otherwise, we adopt this convention here.
+The twelve pitch classes are usually referred to by their most simple representatives, i.e.
+\begin{equation*}
+\begin{split}\text{C, C$\sharp$, D, E$\flat$, F, F$\sharp$, G, A$\flat$, A, B$\flat$, B},\end{split}
+\end{equation*}
+but it is more appropriate to use \sphinxstyleemphasis{integer notation} in which each pitch class is represented
+by an integer \(k \in \mathbb{Z}_{12}\).
+\begin{equation*}
+\begin{split}\mathbb{Z}_{12}=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\},\end{split}
+\end{equation*}
+and usually one sets \(0\equiv \text{C}\). This allows to use \sphinxstyleemphasis{modular arithmetic}
+do calculations with pitch classes.
+\begin{equation*}
+\begin{split}\pi: (o, q, t) \mapsto 7 \cdot q + 4 \cdot t \mod 12\end{split}
+\end{equation*}
+{[}tikz: Chromatic circle{]}
+
+Reordering pitch classes along the circle of fifths is achieved via the mapping
+\begin{equation*}
+\begin{split}t \mapsto 7 \cdot t \mod 12\end{split}
+\end{equation*}
+{[}tikz circle of fifths{]}
+
+
+\subsubsection{Pitch classes}
+\label{\detokenize{1_fundamentals:pitch-classes}}
+A very common object in music theory is that of a \sphinxstyleemphasis{pitch class}. Pitch classes
+are equivalence classes of tones that incorporate some kind of invariance.
+The two most common equivalences are \sphinxstyleemphasis{octave equivalence} and \sphinxstyleemphasis{enharmonic equivalence}.
+
+
 \subsection{Frequencies}
 \label{\detokenize{1_fundamentals:frequencies}}
 Each tone corresponds to some \sphinxstyleemphasis{fundamental frequency} \(f\) in Hertz (Hz),
@@ -365,48 +432,7 @@ Changing the chamber tone will, of course, change the frequency for each tone:
 \PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{393.78}
 \end{sphinxVerbatim}
 
-
-\subsection{Octave equivalence}
-\label{\detokenize{1_fundamentals:octave-equivalence}}
-Octave equivalance considers all tones to be equivalent that are separated by one or
-multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
-are related by multiples of 2 are octave equivalent.
-
-
-\subsection{Tonnetz}
-\label{\detokenize{1_fundamentals:tonnetz}}
-The \sphinxstyleemphasis{Tonnetz} does not contain octaves and thus corresponds to a projection
-\begin{equation*}
-\begin{split}\pi: (o, q, t) \mapsto (q, t).\end{split}
-\end{equation*}
-
-\section{Pitch classes}
-\label{\detokenize{1_fundamentals:pitch-classes}}
-A very common object in music theory is that of a \sphinxstyleemphasis{pitch class}. Pitch classes
-are equivalence classes of tones that incorporate some kind of invariance.
-The two most common equivalences are \sphinxstyleemphasis{octave equivalence} and \sphinxstyleemphasis{enharmonic equivalence}.
-
-
-\subsection{Enharmonic equivalence}
-\label{\detokenize{1_fundamentals:enharmonic-equivalence}}
-If, in addition to octave equivalence, one further assumes enharmonic equivalence,
-all tones separated by 12 fifths on the line of fifths
-are considered to be equivalent, e.g. \(\text{A}\sharp\) and \(\text{B}\flat\),
-\(\text{F}\sharp\) and \(\text{G}\flat\), \(\text{G}\sharp\), and \(\text{A}\flat\) etc.
-
-The notion of a pitch class usually entails both octave and enharmonic equivalence.
-Consequently, there are twelve pitch classes. If not mentioned otherwise, we adopt this convention here.
-The twelve pitch classes are usually referred to by their most simple representatives, i.e.
-\begin{equation*}
-\begin{split}\text{C, C$\sharp$, D, E$\flat$, F, F$\sharp$, G, A$\flat$, A, B$\flat$, B},\end{split}
-\end{equation*}
-but it is more appropriate to use \sphinxstyleemphasis{integer notation} in which each pitch class is represented
-by an integer \(k \in \mathbb{Z}_{12}\).
-\begin{equation*}
-\begin{split}\mathbb{Z}_{12}=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\},\end{split}
-\end{equation*}
-and usually one sets \(0\equiv \text{C}\). This allows to use \sphinxstyleemphasis{modular arithmetic}
-do calculations with pitch classes.
+The \sphinxtitleref{Tone.frequency} attribute is always calculated with respect to a chamber tone of 440Hz.
 
 
 \subsection{MIDI}
@@ -422,11 +448,6 @@ the MIDI pitch for the tonal center (60).
 \begin{equation*}
 \begin{split}m = 60 + 12 \cdot o + 7 \cdot f + 4 \cdot t\end{split}
 \end{equation*}
-
-\subsection{Other invariances}
-\label{\detokenize{1_fundamentals:other-invariances}}
-OPTIC
-
 
 \subsection{Tuning / Temperament}
 \label{\detokenize{1_fundamentals:tuning-temperament}}
