@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2. Fundamentals I &#8212; musictheory 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Fundamentals II" href="3_fundamentals2.html" />
+    <link rel="prev" title="1. Introduction" href="1_intro.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-musictheory">
+<span id="fundamentals-i"></span><h1><span class="section-number">2. </span>Fundamentals I<a class="headerlink" href="#module-musictheory" title="Permalink to this headline">¶</a></h1>
+<p>The theory presented in here can be described as a <em>tonal theory</em> in the sense
+that its most fundamental objects are <em>tones</em>, discrete musical entities that have
+a certain location in tonal space.
+A tonal space is then a metrical space describing all possible tone locations,
+and the metric is given by an <em>interval function</em> between the tones. Note that by this definition,
+there are as many different tonal spaces as there are interval functions.</p>
+<p>While many aspects and examples will be taken
+from Western (classical) music, the theory is in principle not restricted to this
+tradition but extends well to virtually all musical cultures where a tone is a meaningful concept.</p>
+<div class="section" id="tones">
+<h2><span class="section-number">2.1. </span>Tones<a class="headerlink" href="#tones" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start with a mental exercise: imagine a tone.
+Contemplate for a while what this means.
+Does this tone have a pitch? A duration? A velocity (volume)?</p>
+<ul class="simple">
+<li><p>Riemann (1916). <em>Ideen zu einer Lehre von den Tonvorstellungen</em>:</p></li>
+</ul>
+<p>“The ultimate elements of the tonal imagination are single tones.” (Wason &amp; Martin, 1992, 92)</p>
+<p>Bearing that in mind, let’s create (or <em>instantiate</em>) a tone. To do so, we need to
+conceptualize (“vorstellen” in Riemann’s terminology) a <em>tone location</em> (“Tonort”, Mazzola 1985, 241).
+There are many different ways to do this. In fact, the way we specify the location of a tone
+defines the tonal space in which it is situated.</p>
+<div class="section" id="euler-space">
+<h3><span class="section-number">2.1.1. </span>Euler Space<a class="headerlink" href="#euler-space" title="Permalink to this headline">¶</a></h3>
+<p>One option is to locate a tone <cite>t</cite> as a point <span class="math notranslate nohighlight">\(p=(o, q, t)\)</span> in Euler Space, defined by
+a number of octaves <cite>o</cite>, fifths <cite>q</cite>, and thirds <cite>t</cite>. We will use the <a class="reference internal" href="api.html#musictheory.Tone" title="musictheory.Tone"><code class="xref py py-class docutils literal notranslate"><span class="pre">musictheory.Tone</span></code></a>
+class for this</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">musictheory</span> <span class="kn">import</span> <span class="n">Tone</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="n">octave</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fifth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">third</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Printing this tone will give us the common name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Tone</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A shorter way to initialize a tone is by just passing a triple to the class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Tone</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>From this representation we can derive a variety of others, corrsponding to transformations of
+tonal space.</p>
+<p>Tone triples can be assigned a more-readable label, e.g. <code class="docutils literal notranslate"><span class="pre">C4'</span></code>, <code class="docutils literal notranslate"><span class="pre">Dbb2,,</span></code>.</p>
+<p>Regular expression: <code class="regexp docutils literal notranslate"><span class="pre">[A-G](#|b)*d(,|')+</span></code>.</p>
+</div>
+<div class="section" id="equivalences">
+<h3><span class="section-number">2.1.2. </span>Equivalences<a class="headerlink" href="#equivalences" title="Permalink to this headline">¶</a></h3>
+<p>Equivalences are related to certain invariances of how we conceive of tones and their relations.</p>
+<p>OPTIC</p>
+<div class="section" id="octave-equivalence">
+<h4><span class="section-number">2.1.2.1. </span>Octave equivalence<a class="headerlink" href="#octave-equivalence" title="Permalink to this headline">¶</a></h4>
+<p>Octave equivalence seems to be a universal phenomenon (REF) and is likely even present in
+non-human mammals (REF).</p>
+<p>Octave equivalance considers all tones to be equivalent that are separated by one or
+multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
+are related by multiples of 2 are octave equivalent.</p>
+<div class="math notranslate nohighlight">
+\[\pi: (o, q, t) \mapsto (q, t).\]</div>
+<p>The <em>Tonnetz</em> does not contain octaves…</p>
+<p>[tikz Tonnetz]</p>
+</div>
+<div class="section" id="pythagorean">
+<h4><span class="section-number">2.1.2.2. </span>Pythagorean<a class="headerlink" href="#pythagorean" title="Permalink to this headline">¶</a></h4>
+<p>In Pythagorean tuning, we equate a just fifth with a Pythagorean fifth.</p>
+<div class="math notranslate nohighlight">
+\[(2:3)^4 = 4:5\]</div>
+<p>The difference between the left and the right sides of the equation
+are known as the <cite>Pythagorean comma</cite>. In music theory, a comma is a
+minor difference in tuning of the same interval.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\pi: \qquad \mathbb{Z}^3 &amp;\rightarrow \mathbb{Z} \\
+(o, q, t) &amp;\mapsto q\end{split}\]</div>
+<p>This mapping projects all tones on to the <cite>line of fifths</cite> (Riemann, 1900; Temperley, 2000).</p>
+<p>[tikz: line of fifth]</p>
+</div>
+<div class="section" id="enharmonic-equivalence">
+<h4><span class="section-number">2.1.2.3. </span>Enharmonic equivalence<a class="headerlink" href="#enharmonic-equivalence" title="Permalink to this headline">¶</a></h4>
+<p>If, in addition to octave equivalence, one further assumes enharmonic equivalence,
+all tones separated by 12 fifths on the line of fifths
+are considered to be equivalent, e.g. <span class="math notranslate nohighlight">\(\text{A}\sharp\)</span> and <span class="math notranslate nohighlight">\(\text{B}\flat\)</span>,
+<span class="math notranslate nohighlight">\(\text{F}\sharp\)</span> and <span class="math notranslate nohighlight">\(\text{G}\flat\)</span>, <span class="math notranslate nohighlight">\(\text{G}\sharp\)</span>, and <span class="math notranslate nohighlight">\(\text{A}\flat\)</span> etc.</p>
+<p>The notion of a pitch class usually entails both octave and enharmonic equivalence.
+Consequently, there are twelve pitch classes. If not mentioned otherwise, we adopt this convention here.
+The twelve pitch classes are usually referred to by their most simple representatives, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\text{C, C$\sharp$, D, E$\flat$, F, F$\sharp$, G, A$\flat$, A, B$\flat$, B},\]</div>
+<p>but it is more appropriate to use <em>integer notation</em> in which each pitch class is represented
+by an integer <span class="math notranslate nohighlight">\(k \in \mathbb{Z}_{12}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{Z}_{12}=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\},\]</div>
+<p>and usually one sets <span class="math notranslate nohighlight">\(0\equiv \text{C}\)</span>. This allows to use <em>modular arithmetic</em>
+do calculations with pitch classes.</p>
+<div class="math notranslate nohighlight">
+\[\pi: (o, q, t) \mapsto 7 \cdot q + 4 \cdot t \mod 12\]</div>
+<p>[tikz: Chromatic circle]</p>
+<p>Reordering pitch classes along the circle of fifths is achieved via the mapping</p>
+<div class="math notranslate nohighlight">
+\[t \mapsto 7 \cdot t \mod 12\]</div>
+<p>[tikz circle of fifths]</p>
+</div>
+<div class="section" id="pitch-classes">
+<h4><span class="section-number">2.1.2.4. </span>Pitch classes<a class="headerlink" href="#pitch-classes" title="Permalink to this headline">¶</a></h4>
+<p>A very common object in music theory is that of a <em>pitch class</em>. Pitch classes
+are equivalence classes of tones that incorporate some kind of invariance.
+The two most common equivalences are <em>octave equivalence</em> and <em>enharmonic equivalence</em>.</p>
+</div>
+</div>
+<div class="section" id="frequencies">
+<h3><span class="section-number">2.1.3. </span>Frequencies<a class="headerlink" href="#frequencies" title="Permalink to this headline">¶</a></h3>
+<p>Each tone corresponds to some <em>fundamental frequency</em> <span class="math notranslate nohighlight">\(f\)</span> in Hertz (Hz),
+oscillations per second.</p>
+<ul class="simple">
+<li><p>Overtone series</p></li>
+<li><p>frequency ratios</p></li>
+<li><p>logarithm: multiplication =&gt; addition</p></li>
+</ul>
+<p>In order to determine the <cite>frequency</cite> of a tone, it is necessary to define a reference point.
+This reference point, also called the <cite>Kammerton</cite> is nowadays set to <span class="math notranslate nohighlight">\(\text{A}4=440\text{Hz}\)</span>,
+i.e. the frequency of the tone <code class="docutils literal notranslate"><span class="pre">A4_</span></code> is 440 oscillations per seconds. If <span class="math notranslate nohighlight">\(m\)</span> is the MIDI
+number of the tone in questions, then</p>
+<div class="math notranslate nohighlight">
+\[f = K \cdot 2^{(m - 69)/12}\]</div>
+<p>The frequency of a tone can be accessed via the <a class="reference internal" href="api.html#musictheory.Tone.get_frequency" title="musictheory.Tone.get_frequency"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Tone.get_frequency()</span></code></a> method.
+attribute:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">get_frequency</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">392.0</span>
+</pre></div>
+</div>
+<p>Changing the chamber tone will, of course, change the frequency for each tone:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">get_frequency</span><span class="p">(</span><span class="n">chamber_tone</span><span class="o">=</span><span class="mf">442.0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">393.78</span>
+</pre></div>
+</div>
+<p>The <cite>Tone.frequency</cite> attribute is always calculated with respect to a chamber tone of 440Hz.</p>
+</div>
+<div class="section" id="midi">
+<h3><span class="section-number">2.1.4. </span>MIDI<a class="headerlink" href="#midi" title="Permalink to this headline">¶</a></h3>
+<p>The Musical Instrument Digital Interface format (<a class="reference external" href="https://de.wikipedia.org/wiki/Musical_Instrument_Digital_Interface">MIDI</a>) was developed to communicate
+between electronic musical instruments. Each pitch class (assuming enharmonic but not
+octave equivalence) is represented by an integer between 0 and 127, and the MIDI number
+for pitch C4 is set to 60. Increasing a MIDI number corresponds to the number of semitones.
+Since an octave contains twelve semitones, a fifth contains seven semitones, and a major
+third contains four semitones, we can determine the MIDI pitch number for any tone <cite>t</cite>
+by multiplying its Euler coordinates with the respective number of semitones and add it to
+the MIDI pitch for the tonal center (60).</p>
+<div class="math notranslate nohighlight">
+\[m = 60 + 12 \cdot o + 7 \cdot f + 4 \cdot t\]</div>
+</div>
+<div class="section" id="tuning-temperament">
+<h3><span class="section-number">2.1.5. </span>Tuning / Temperament<a class="headerlink" href="#tuning-temperament" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="intervals">
+<h2><span class="section-number">2.2. </span>Intervals<a class="headerlink" href="#intervals" title="Permalink to this headline">¶</a></h2>
+<p>We can add an interval to a tone:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># G</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># F</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># A</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">)</span> <span class="c1"># +M3</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">+</span> <span class="n">i</span>
+<span class="go">B</span>
+</pre></div>
+</div>
+<p>Analogously, we can also substract an interval from a tone:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">-</span> <span class="n">i</span>
+<span class="go">Eb</span>
+</pre></div>
+</div>
+<p>Moreover, we can add or substract intervals from each other:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="c1"># +m6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span>
+<span class="go">P8</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">-</span> <span class="n">j</span>
+<span class="go">-A4</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Pitch intervals</p></li>
+<li><p>Ordered pitch-class intervals (-&gt; rather directed)</p></li>
+<li><p>Unordered pitch-class intervals</p></li>
+<li><p>Interval classes</p></li>
+<li><p>Interval-class content</p></li>
+<li><p>Interval-class vector</p></li>
+</ul>
+<div class="section" id="giss">
+<h3><span class="section-number">2.2.1. </span>GISs<a class="headerlink" href="#giss" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="pitch-class-sets">
+<h2><span class="section-number">2.3. </span>Pitch-Class Sets<a class="headerlink" href="#pitch-class-sets" title="Permalink to this headline">¶</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(y=\{y_1,\ldots,y_m\}\)</span> be a pitch-class set.</p>
+<ul class="simple">
+<li><p>Sets that contain pitch classes</p></li>
+<li><p>ordered: {0,4,7}</p></li>
+<li><p>unordered: {7,0,4}</p></li>
+</ul>
+<div class="section" id="normal-form">
+<h3><span class="section-number">2.3.1. </span>Normal Form<a class="headerlink" href="#normal-form" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>smallest difference between last and first element</p></li>
+<li><p>(see algorithm in Straus,2005)</p></li>
+</ul>
+</div>
+<div class="section" id="transposition">
+<h3><span class="section-number">2.3.2. </span>Transposition<a class="headerlink" href="#transposition" title="Permalink to this headline">¶</a></h3>
+<p>transposition: adding n to each pc (mod 12)</p>
+<ul class="simple">
+<li><p>{0,4,7} + 7 = {7,11,14} = {7,11,2}</p></li>
+</ul>
+<p>The <em>transposition</em> of a pitch-class set <cite>y</cite> by <cite>n</cite> semitones is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T_n(y) &amp;= y + n\mod~12\\
+       &amp;= \{y_1 + n\mod~12, \ldots, y_m + n\mod~12\}\end{split}\]</div>
+</div>
+<div class="section" id="inversion">
+<h3><span class="section-number">2.3.3. </span>Inversion<a class="headerlink" href="#inversion" title="Permalink to this headline">¶</a></h3>
+<p>inversion: reversing the sign of each pc (mod 12)</p>
+<ul class="simple">
+<li><p>[0,4,7] =&gt; [0,-4,-7] = [0,8,5]</p></li>
+</ul>
+<p>The <em>inversion</em> of a pitch-class set <cite>y</cite> is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I(y) &amp;= -y\mod~12 \\
+     &amp;= \{-y_1\mod~12, \ldots,-y_m\mod~12\}\end{split}\]</div>
+<ul class="simple">
+<li><p>Inversion In, Ixy</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that this definition is an entirely different concept
+than <em>chord inversion</em> with which we will deal in later chapters.</p>
+</div>
+</div>
+<div class="section" id="index-number">
+<h3><span class="section-number">2.3.4. </span>Index number<a class="headerlink" href="#index-number" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Forte numbers: &lt;cardinal number&gt;-&lt;ordinal number&gt;</p></li>
+<li><p>ordinal number is position on the list</p></li>
+<li><p>[0,1,3,6,9] =&gt; 5-31</p></li>
+</ul>
+</div>
+<div class="section" id="set-class">
+<h3><span class="section-number">2.3.5. </span>Set Class<a class="headerlink" href="#set-class" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="prime-form">
+<h3><span class="section-number">2.3.6. </span>Prime Form<a class="headerlink" href="#prime-form" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>0 is first entry</p></li>
+<li><p>220 different pc sets in prime form (equivalence by transposition or inversion)</p></li>
+</ul>
+<p>Transformations between representations of tones are actually <em>transformations of tonal space</em>.</p>
+<p>[Diagram of relations between different representations.]</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/longa.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_intro.html">1. Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Fundamentals I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tones">2.1. Tones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#intervals">2.2. Intervals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pitch-class-sets">2.3. Pitch-Class Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_fundamentals2.html">3. Fundamentals II</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference - musictheory</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="1_intro.html" title="previous chapter"><span class="section-number">1. </span>Introduction</a></li>
+      <li>Next: <a href="3_fundamentals2.html" title="next chapter"><span class="section-number">3. </span>Fundamentals II</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Fabian C. Moss.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/2_fundamentals1.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

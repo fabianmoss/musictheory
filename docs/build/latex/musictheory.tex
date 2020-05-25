@@ -140,10 +140,10 @@ Feel free to \sphinxhref{mailto:fabianmoss@gmail.com}{contact me} with your ques
 
 
 \chapter{Introduction}
-\label{\detokenize{0_intro:introduction}}\label{\detokenize{0_intro::doc}}
+\label{\detokenize{1_intro:introduction}}\label{\detokenize{1_intro::doc}}
 
 \section{What is CM?}
-\label{\detokenize{0_intro:what-is-cm}}\begin{itemize}
+\label{\detokenize{1_intro:what-is-cm}}\begin{itemize}
 \item {} 
 Description and relation to related fields
 \textendash{} musicology
@@ -168,7 +168,7 @@ Music as the “missing Humboldt system” (Merker, 2002) with its “orthogonal
 
 
 \section{Quickstart}
-\label{\detokenize{0_intro:quickstart}}
+\label{\detokenize{1_intro:quickstart}}
 \begin{sphinxadmonition}{warning}{Warning:}
 These instructions do not work yet.
 \end{sphinxadmonition}
@@ -181,7 +181,7 @@ pip install musictheory
 
 
 \section{Notes}
-\label{\detokenize{0_intro:notes}}\begin{itemize}
+\label{\detokenize{1_intro:notes}}\begin{itemize}
 \item {} 
 Overarching goal is to have an ACCESSIBLE introduction for musicologists with elementary understanding of a programming language such as Python or R. Requirement should be a sound understanding of how functions, loops, and conditionals work.
 
@@ -253,15 +253,15 @@ visualisations (pitch\sphinxhyphen{}time plots)
 
 
 \section{Acknowledgements}
-\label{\detokenize{0_intro:acknowledgements}}\begin{itemize}
+\label{\detokenize{1_intro:acknowledgements}}\begin{itemize}
 \item {} 
 DCML
 
 \end{itemize}
 
 
-\chapter{Fundamentals}
-\label{\detokenize{1_fundamentals:module-musictheory}}\label{\detokenize{1_fundamentals:fundamentals}}\label{\detokenize{1_fundamentals::doc}}\index{module@\spxentry{module}!musictheory@\spxentry{musictheory}}\index{musictheory@\spxentry{musictheory}!module@\spxentry{module}}
+\chapter{Fundamentals I}
+\label{\detokenize{2_fundamentals1:module-musictheory}}\label{\detokenize{2_fundamentals1:fundamentals-i}}\label{\detokenize{2_fundamentals1::doc}}\index{module@\spxentry{module}!musictheory@\spxentry{musictheory}}\index{musictheory@\spxentry{musictheory}!module@\spxentry{module}}
 The theory presented in here can be described as a \sphinxstyleemphasis{tonal theory} in the sense
 that its most fundamental objects are \sphinxstyleemphasis{tones}, discrete musical entities that have
 a certain location in tonal space.
@@ -275,7 +275,7 @@ tradition but extends well to virtually all musical cultures where a tone is a m
 
 
 \section{Tones}
-\label{\detokenize{1_fundamentals:tones}}
+\label{\detokenize{2_fundamentals1:tones}}
 Let’s start with a mental exercise: imagine a tone.
 Contemplate for a while what this means.
 Does this tone have a pitch? A duration? A velocity (volume)?
@@ -294,7 +294,7 @@ defines the tonal space in which it is situated.
 
 
 \subsection{Euler Space}
-\label{\detokenize{1_fundamentals:euler-space}}
+\label{\detokenize{2_fundamentals1:euler-space}}
 One option is to locate a tone \sphinxtitleref{t} as a point \(p=(o, q, t)\) in Euler Space, defined by
 a number of octaves \sphinxtitleref{o}, fifths \sphinxtitleref{q}, and thirds \sphinxtitleref{t}. We will use the {\hyperref[\detokenize{api:musictheory.Tone}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{musictheory.Tone}}}}}
 class for this
@@ -328,12 +328,17 @@ Regular expression: \sphinxcode{\sphinxupquote{{[}A\sphinxhyphen{}G{]}(\#|b)*d(,
 
 
 \subsection{Equivalences}
-\label{\detokenize{1_fundamentals:equivalences}}
+\label{\detokenize{2_fundamentals1:equivalences}}
+Equivalences are related to certain invariances of how we conceive of tones and their relations.
+
 OPTIC
 
 
 \subsubsection{Octave equivalence}
-\label{\detokenize{1_fundamentals:octave-equivalence}}
+\label{\detokenize{2_fundamentals1:octave-equivalence}}
+Octave equivalence seems to be a universal phenomenon (REF) and is likely even present in
+non\sphinxhyphen{}human mammals (REF).
+
 Octave equivalance considers all tones to be equivalent that are separated by one or
 multiple octaves, e.g C1, C2, C4, C10 etc. More precisely, all tones whose fundamental frequencies
 are related by multiples of 2 are octave equivalent.
@@ -346,7 +351,15 @@ The \sphinxstyleemphasis{Tonnetz} does not contain octaves…
 
 
 \subsubsection{Pythagorean}
-\label{\detokenize{1_fundamentals:pythagorean}}\begin{equation*}
+\label{\detokenize{2_fundamentals1:pythagorean}}
+In Pythagorean tuning, we equate a just fifth with a Pythagorean fifth.
+\begin{equation*}
+\begin{split}(2:3)^4 = 4:5\end{split}
+\end{equation*}
+The difference between the left and the right sides of the equation
+are known as the \sphinxtitleref{Pythagorean comma}. In music theory, a comma is a
+minor difference in tuning of the same interval.
+\begin{equation*}
 \begin{split}\pi: \qquad \mathbb{Z}^3 &\rightarrow \mathbb{Z} \\
 (o, q, t) &\mapsto q\end{split}
 \end{equation*}
@@ -356,7 +369,7 @@ This mapping projects all tones on to the \sphinxtitleref{line of fifths} (Riema
 
 
 \subsubsection{Enharmonic equivalence}
-\label{\detokenize{1_fundamentals:enharmonic-equivalence}}
+\label{\detokenize{2_fundamentals1:enharmonic-equivalence}}
 If, in addition to octave equivalence, one further assumes enharmonic equivalence,
 all tones separated by 12 fifths on the line of fifths
 are considered to be equivalent, e.g. \(\text{A}\sharp\) and \(\text{B}\flat\),
@@ -388,14 +401,14 @@ Reordering pitch classes along the circle of fifths is achieved via the mapping
 
 
 \subsubsection{Pitch classes}
-\label{\detokenize{1_fundamentals:pitch-classes}}
+\label{\detokenize{2_fundamentals1:pitch-classes}}
 A very common object in music theory is that of a \sphinxstyleemphasis{pitch class}. Pitch classes
 are equivalence classes of tones that incorporate some kind of invariance.
 The two most common equivalences are \sphinxstyleemphasis{octave equivalence} and \sphinxstyleemphasis{enharmonic equivalence}.
 
 
 \subsection{Frequencies}
-\label{\detokenize{1_fundamentals:frequencies}}
+\label{\detokenize{2_fundamentals1:frequencies}}
 Each tone corresponds to some \sphinxstyleemphasis{fundamental frequency} \(f\) in Hertz (Hz),
 oscillations per second.
 \begin{itemize}
@@ -436,7 +449,7 @@ The \sphinxtitleref{Tone.frequency} attribute is always calculated with respect 
 
 
 \subsection{MIDI}
-\label{\detokenize{1_fundamentals:midi}}
+\label{\detokenize{2_fundamentals1:midi}}
 The Musical Instrument Digital Interface format (\sphinxhref{https://de.wikipedia.org/wiki/Musical\_Instrument\_Digital\_Interface}{MIDI}) was developed to communicate
 between electronic musical instruments. Each pitch class (assuming enharmonic but not
 octave equivalence) is represented by an integer between 0 and 127, and the MIDI number
@@ -450,10 +463,10 @@ the MIDI pitch for the tonal center (60).
 \end{equation*}
 
 \subsection{Tuning / Temperament}
-\label{\detokenize{1_fundamentals:tuning-temperament}}
+\label{\detokenize{2_fundamentals1:tuning-temperament}}
 
 \section{Intervals}
-\label{\detokenize{1_fundamentals:intervals}}
+\label{\detokenize{2_fundamentals1:intervals}}
 We can add an interval to a tone:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -509,10 +522,10 @@ Interval\sphinxhyphen{}class vector
 
 
 \subsection{GISs}
-\label{\detokenize{1_fundamentals:giss}}
+\label{\detokenize{2_fundamentals1:giss}}
 
 \section{Pitch\sphinxhyphen{}Class Sets}
-\label{\detokenize{1_fundamentals:pitch-class-sets}}
+\label{\detokenize{2_fundamentals1:pitch-class-sets}}
 Let \(y=\{y_1,\ldots,y_m\}\) be a pitch\sphinxhyphen{}class set.
 \begin{itemize}
 \item {} 
@@ -528,7 +541,7 @@ unordered: \{7,0,4\}
 
 
 \subsection{Normal Form}
-\label{\detokenize{1_fundamentals:normal-form}}\begin{itemize}
+\label{\detokenize{2_fundamentals1:normal-form}}\begin{itemize}
 \item {} 
 smallest difference between last and first element
 
@@ -539,7 +552,7 @@ smallest difference between last and first element
 
 
 \subsection{Transposition}
-\label{\detokenize{1_fundamentals:transposition}}
+\label{\detokenize{2_fundamentals1:transposition}}
 transposition: adding n to each pc (mod 12)
 \begin{itemize}
 \item {} 
@@ -554,7 +567,7 @@ The \sphinxstyleemphasis{transposition} of a pitch\sphinxhyphen{}class set \sphi
 \end{equation*}
 
 \subsection{Inversion}
-\label{\detokenize{1_fundamentals:inversion}}
+\label{\detokenize{2_fundamentals1:inversion}}
 inversion: reversing the sign of each pc (mod 12)
 \begin{itemize}
 \item {} 
@@ -579,7 +592,7 @@ than \sphinxstyleemphasis{chord inversion} with which we will deal in later chap
 
 
 \subsection{Index number}
-\label{\detokenize{1_fundamentals:index-number}}\begin{itemize}
+\label{\detokenize{2_fundamentals1:index-number}}\begin{itemize}
 \item {} 
 Forte numbers: \textless{}cardinal number\textgreater{}\sphinxhyphen{}\textless{}ordinal number\textgreater{}
 
@@ -593,10 +606,10 @@ ordinal number is position on the list
 
 
 \subsection{Set Class}
-\label{\detokenize{1_fundamentals:set-class}}
+\label{\detokenize{2_fundamentals1:set-class}}
 
 \subsection{Prime Form}
-\label{\detokenize{1_fundamentals:prime-form}}\begin{itemize}
+\label{\detokenize{2_fundamentals1:prime-form}}\begin{itemize}
 \item {} 
 0 is first entry
 
@@ -610,8 +623,11 @@ Transformations between representations of tones are actually \sphinxstyleemphas
 {[}Diagram of relations between different representations.{]}
 
 
+\chapter{Fundamentals II}
+\label{\detokenize{3_fundamentals2:fundamentals-ii}}\label{\detokenize{3_fundamentals2::doc}}
+
 \section{The diatonic scale}
-\label{\detokenize{1_fundamentals:the-diatonic-scale}}
+\label{\detokenize{3_fundamentals2:the-diatonic-scale}}
 Music in the Western tradition fundamentally builds on
 so\sphinxhyphen{}called \sphinxstyleemphasis{diatonic} scales, an arrangement of seven tones
 that are named with latin letters from A to G. “Diatonic” can
@@ -639,13 +655,13 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
 \end{equation*}
 
 \section{Other scales}
-\label{\detokenize{1_fundamentals:other-scales}}
+\label{\detokenize{3_fundamentals2:other-scales}}
 
 \subsection{Pentatonic}
-\label{\detokenize{1_fundamentals:pentatonic}}
+\label{\detokenize{3_fundamentals2:pentatonic}}
 
 \subsection{Scales based on chromaticism}
-\label{\detokenize{1_fundamentals:scales-based-on-chromaticism}}\begin{itemize}
+\label{\detokenize{3_fundamentals2:scales-based-on-chromaticism}}\begin{itemize}
 \item {} 
 chromatic
 
@@ -662,7 +678,7 @@ whole tone
 
 
 \section{Modes}
-\label{\detokenize{1_fundamentals:modes}}
+\label{\detokenize{3_fundamentals2:modes}}
 scale plus order plus hierarchy (but order already defined above?)
 
 Different terminologies:
@@ -683,32 +699,32 @@ other modes?
 
 
 \section{Keys}
-\label{\detokenize{1_fundamentals:keys}}
+\label{\detokenize{3_fundamentals2:keys}}
 
 \section{Time}
-\label{\detokenize{1_fundamentals:time}}
+\label{\detokenize{3_fundamentals2:time}}
 
 \subsection{Notes}
-\label{\detokenize{1_fundamentals:notes}}
+\label{\detokenize{3_fundamentals2:notes}}
 (Tones + Duration)
 blablabla…
 
 
 \subsection{Rhythm}
-\label{\detokenize{1_fundamentals:rhythm}}
+\label{\detokenize{3_fundamentals2:rhythm}}
 (Duration patterns)
 
 
 \subsection{Meter}
-\label{\detokenize{1_fundamentals:meter}}
+\label{\detokenize{3_fundamentals2:meter}}
 (Hierarchy)
 
 
 \subsection{Musical time vs. performance time}
-\label{\detokenize{1_fundamentals:musical-time-vs-performance-time}}
+\label{\detokenize{3_fundamentals2:musical-time-vs-performance-time}}
 
 \section{Notes on Segmentation}
-\label{\detokenize{1_fundamentals:notes-on-segmentation}}\begin{itemize}
+\label{\detokenize{3_fundamentals2:notes-on-segmentation}}\begin{itemize}
 \item {} 
 Straus 2005
 
@@ -1094,7 +1110,7 @@ Specific interval (directed) between two tones.
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{m}
-\item\relax\sphinxstyleindexentry{musictheory}\sphinxstyleindexpageref{1_fundamentals:\detokenize{module-musictheory}}
+\item\relax\sphinxstyleindexentry{musictheory}\sphinxstyleindexpageref{2_fundamentals1:\detokenize{module-musictheory}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}

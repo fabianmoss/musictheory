@@ -50,8 +50,9 @@ The Python project `musthe`_ also seems to pursue a similar goal.
    :maxdepth: 2
    :numbered:
 
-   0_intro
-   1_fundamentals
+   1_intro
+   2_fundamentals1
+   3_fundamentals2
 ..    2_sequences
 ..    3_representations
 ..    4_advanced
