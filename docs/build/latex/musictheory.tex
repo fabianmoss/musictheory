@@ -97,8 +97,9 @@ Welcome!
 This is not a pedagogical resource for basic music theory concepts
 but an in\sphinxhyphen{}depth introduction into the structures of Western music,
 built axiomatically from tones and their relations.
-The logo, a \sphinxhref{https://en.wikipedia.org/wiki/Sixty-fourth\_note}{hemidemisemiquaver} (or a sixty\sphinxhyphen{}fourth note),
-symbolically reflects this level of difficulty.
+The logo, a \sphinxhref{https://en.wikipedia.org/wiki/Longa\_(music)}{longa} (or a quadruple whole note),
+symbolically reflects this level of difficulty. since it is the longest
+note value in Western music notation.
 
 This project is inspired by a number of great books, e.g.
 \begin{itemize}
@@ -342,12 +343,26 @@ logarithm: multiplication =\textgreater{} addition
 
 \end{itemize}
 
+In order to determine the \sphinxtitleref{frequency} of a tone, it is necessary to define a reference point.
+This reference point, also called the \sphinxtitleref{Kammerton} is nowadays set to \(\text{A}4=440\text{Hz}\),
+i.e. the frequency of the tone \sphinxcode{\sphinxupquote{A4\_}} is 440 oscillations per seconds. If \(m\) is the MIDI
+number of the tone in questions, then
+\begin{equation*}
+\begin{split}f = K \cdot 2^{(m - 69)/12}\end{split}
+\end{equation*}
 The frequency of a tone can be accessed via the {\hyperref[\detokenize{api:musictheory.Tone.get_frequency}]{\sphinxcrossref{\sphinxcode{\sphinxupquote{Tone.get\_frequency()}}}}} method.
 attribute:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{t}\PYG{o}{.}\PYG{n}{get\PYGZus{}frequency}\PYG{p}{(}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{261.63}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{392.0}
+\end{sphinxVerbatim}
+
+Changing the chamber tone will, of course, change the frequency for each tone:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{t}\PYG{o}{.}\PYG{n}{get\PYGZus{}frequency}\PYG{p}{(}\PYG{n}{chamber\PYGZus{}tone}\PYG{o}{=}\PYG{l+m+mf}{442.0}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{393.78}
 \end{sphinxVerbatim}
 
 
@@ -393,6 +408,20 @@ by an integer \(k \in \mathbb{Z}_{12}\).
 and usually one sets \(0\equiv \text{C}\). This allows to use \sphinxstyleemphasis{modular arithmetic}
 do calculations with pitch classes.
 
+
+\subsection{MIDI}
+\label{\detokenize{1_fundamentals:midi}}
+The Musical Instrument Digital Interface format (\sphinxhref{https://de.wikipedia.org/wiki/Musical\_Instrument\_Digital\_Interface}{MIDI}) was developed to communicate
+between electronic musical instruments. Each pitch class (assuming enharmonic but not
+octave equivalence) is represented by an integer between 0 and 127, and the MIDI number
+for pitch C4 is set to 60. Increasing a MIDI number corresponds to the number of semitones.
+Since an octave contains twelve semitones, a fifth contains seven semitones, and a major
+third contains four semitones, we can determine the MIDI pitch number for any tone \sphinxtitleref{t}
+by multiplying its Euler coordinates with the respective number of semitones and add it to
+the MIDI pitch for the tonal center (60).
+\begin{equation*}
+\begin{split}m = 60 + 12 \cdot o + 7 \cdot f + 4 \cdot t\end{split}
+\end{equation*}
 
 \subsection{Other invariances}
 \label{\detokenize{1_fundamentals:other-invariances}}

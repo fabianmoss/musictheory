@@ -10,7 +10,7 @@ if __name__ == "__main__":
     j = Interval(source=c, target=t)
     
     print(i.get_frequency_ratio())
-    print(g.frequency)
+    print(g.get_frequency(), g.get_frequency(chamber_tone=442.0))
 
     # print(c + j, c - j)
     # print(i+j, i-j)

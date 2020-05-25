@@ -88,14 +88,14 @@ attribute:
 .. code-block:: python
 
    t.get_frequency()
-   >>> 261.63
+   >>> 392.0
 
 Changing the chamber tone will, of course, change the frequency for each tone:
 
 .. code::
 
    t.get_frequency(chamber_tone=442.0)
-   >>> 392.0
+   >>> 393.78
 
 Octave equivalence
 ~~~~~~~~~~~~~~~~~~

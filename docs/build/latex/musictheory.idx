@@ -1,17 +1,17 @@
 \indexentry{module@\spxentry{module}!musictheory@\spxentry{musictheory}|hyperpage}{5}
 \indexentry{musictheory@\spxentry{musictheory}!module@\spxentry{module}|hyperpage}{5}
-\indexentry{module@\spxentry{module}!musictheory@\spxentry{musictheory}|hyperpage}{13}
-\indexentry{musictheory@\spxentry{musictheory}!module@\spxentry{module}|hyperpage}{13}
-\indexentry{Tone (class in musictheory)@\spxentry{Tone}\spxextra{class in musictheory}|hyperpage}{13}
-\indexentry{get\_accidentals() (musictheory.Tone method)@\spxentry{get\_accidentals()}\spxextra{musictheory.Tone method}|hyperpage}{13}
-\indexentry{get\_frequency() (musictheory.Tone method)@\spxentry{get\_frequency()}\spxextra{musictheory.Tone method}|hyperpage}{13}
-\indexentry{get\_midi\_pitch() (musictheory.Tone method)@\spxentry{get\_midi\_pitch()}\spxextra{musictheory.Tone method}|hyperpage}{14}
-\indexentry{get\_name() (musictheory.Tone method)@\spxentry{get\_name()}\spxextra{musictheory.Tone method}|hyperpage}{14}
-\indexentry{get\_pitch\_class() (musictheory.Tone method)@\spxentry{get\_pitch\_class()}\spxextra{musictheory.Tone method}|hyperpage}{14}
-\indexentry{get\_step() (musictheory.Tone method)@\spxentry{get\_step()}\spxextra{musictheory.Tone method}|hyperpage}{15}
-\indexentry{get\_syntonic() (musictheory.Tone method)@\spxentry{get\_syntonic()}\spxextra{musictheory.Tone method}|hyperpage}{15}
-\indexentry{Interval (class in musictheory)@\spxentry{Interval}\spxextra{class in musictheory}|hyperpage}{15}
-\indexentry{get\_euclidean\_distance() (musictheory.Interval method)@\spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}|hyperpage}{15}
-\indexentry{get\_frequency\_ratio() (musictheory.Interval method)@\spxentry{get\_frequency\_ratio()}\spxextra{musictheory.Interval method}|hyperpage}{16}
-\indexentry{get\_generic\_interval() (musictheory.Interval method)@\spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}|hyperpage}{16}
-\indexentry{get\_specific\_interval() (musictheory.Interval method)@\spxentry{get\_specific\_interval()}\spxextra{musictheory.Interval method}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!musictheory@\spxentry{musictheory}|hyperpage}{15}
+\indexentry{musictheory@\spxentry{musictheory}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{Tone (class in musictheory)@\spxentry{Tone}\spxextra{class in musictheory}|hyperpage}{15}
+\indexentry{get\_accidentals() (musictheory.Tone method)@\spxentry{get\_accidentals()}\spxextra{musictheory.Tone method}|hyperpage}{15}
+\indexentry{get\_frequency() (musictheory.Tone method)@\spxentry{get\_frequency()}\spxextra{musictheory.Tone method}|hyperpage}{15}
+\indexentry{get\_midi\_pitch() (musictheory.Tone method)@\spxentry{get\_midi\_pitch()}\spxextra{musictheory.Tone method}|hyperpage}{16}
+\indexentry{get\_name() (musictheory.Tone method)@\spxentry{get\_name()}\spxextra{musictheory.Tone method}|hyperpage}{16}
+\indexentry{get\_pitch\_class() (musictheory.Tone method)@\spxentry{get\_pitch\_class()}\spxextra{musictheory.Tone method}|hyperpage}{16}
+\indexentry{get\_step() (musictheory.Tone method)@\spxentry{get\_step()}\spxextra{musictheory.Tone method}|hyperpage}{17}
+\indexentry{get\_syntonic() (musictheory.Tone method)@\spxentry{get\_syntonic()}\spxextra{musictheory.Tone method}|hyperpage}{17}
+\indexentry{Interval (class in musictheory)@\spxentry{Interval}\spxextra{class in musictheory}|hyperpage}{17}
+\indexentry{get\_euclidean\_distance() (musictheory.Interval method)@\spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}|hyperpage}{17}
+\indexentry{get\_frequency\_ratio() (musictheory.Interval method)@\spxentry{get\_frequency\_ratio()}\spxextra{musictheory.Interval method}|hyperpage}{18}
+\indexentry{get\_generic\_interval() (musictheory.Interval method)@\spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}|hyperpage}{18}
+\indexentry{get\_specific\_interval() (musictheory.Interval method)@\spxentry{get\_specific\_interval()}\spxextra{musictheory.Interval method}|hyperpage}{18}

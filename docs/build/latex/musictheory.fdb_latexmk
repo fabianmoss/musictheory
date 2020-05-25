@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex musictheory.idx"] 1590406227 "musictheory.idx" "musictheory.ind" "musictheory" 1590412951
-  "musictheory.idx" 1590412950 2102 4011b3455d4308b49cc448e0957f23c7 "pdflatex"
+["makeindex musictheory.idx"] 1590432716 "musictheory.idx" "musictheory.ind" "musictheory" 1590432804
+  "musictheory.idx" 1590432804 2102 36932ff40d94534f0ffdbc81f366467e "pdflatex"
   (generated)
   "musictheory.ind"
   "musictheory.ilg"
-["pdflatex"] 1590412946 "musictheory.tex" "musictheory.pdf" "musictheory" 1590412951
+["pdflatex"] 1590432801 "musictheory.tex" "musictheory.pdf" "musictheory" 1590432804
   "C:/Users/fabianmoss/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tctt0900.pk" 1590063442 8332 2d08c39f14e99dd68a3b5fc5d1d4eea7 ""
   "C:/Users/fabianmoss/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1587969641 10521016 5f50b42fba9a22bfc328be50a34c9911 ""
   "C:/Users/fabianmoss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1590063438 173894 7c5c787bd3a9b7758934d7341165da1b ""
@@ -53,6 +53,7 @@
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247596666 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
+  "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb" 1136846148 50493 4ed1f7e9eba8f1f3e1ec25195460190d ""
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb" 1136846148 45758 19968a0990191524e34e1994d4a31cb6 ""
@@ -171,20 +172,20 @@
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/fabianmoss/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 74963e80d77be39a0b7442967b27c75b ""
   "footnotehyper-sphinx.sty" 1589737009 8888 1bbd7bdeae8c8bed1d10d551bddb1cc9 ""
-  "musictheory.aux" 1590412950 10912 a7c1f3fc940c2ce218e8d66d5f1fb751 "pdflatex"
-  "musictheory.ind" 1590406227 1632 ccdedcec4936b2518c75453240da7d18 "makeindex musictheory.idx"
-  "musictheory.out" 1590412950 2393 e3f9c999ecb11eebbf936f3159e51b21 "pdflatex"
-  "musictheory.tex" 1590412943 43798 fea8826c310660ee437263d2ed69a115 ""
-  "musictheory.toc" 1590412950 3344 dc01e9f8e47e2cc6dde072660b1b2585 "pdflatex"
+  "musictheory.aux" 1590432804 11104 46f2289abb27bc4b313c86ec1a4eda26 "pdflatex"
+  "musictheory.ind" 1590432716 1632 2ce38e461d798ae75417e8c0e6c6b93e "makeindex musictheory.idx"
+  "musictheory.out" 1590432804 2393 e3f9c999ecb11eebbf936f3159e51b21 "pdflatex"
+  "musictheory.tex" 1590432801 45586 355c7c445dfb05d588b52c1e8e07a050 ""
+  "musictheory.toc" 1590432804 3422 8da72a6ba401247dc7526b0f8a4a7616 "pdflatex"
   "sphinx.sty" 1589737009 82020 a38700b8aa22dfd94a8a5b905e69be73 ""
-  "sphinxhighlight.sty" 1590412942 8242 5cf9b0eb20ee5aaf9511e1ea0dd43514 ""
+  "sphinxhighlight.sty" 1590432801 8242 5cf9b0eb20ee5aaf9511e1ea0dd43514 ""
   "sphinxmanual.cls" 1589737009 4236 124cd90deb92742b5d3922bfc2cd70c0 ""
-  "sphinxmessages.sty" 1590412943 765 06218e7b66d00e05ea0d90ac6e115733 ""
+  "sphinxmessages.sty" 1590432801 765 06218e7b66d00e05ea0d90ac6e115733 ""
   "sphinxmulticell.sty" 1589737009 14606 0b6edc2b1a83546ed92026d1f6a311b5 ""
   (generated)
-  "musictheory.pdf"
-  "musictheory.out"
-  "musictheory.aux"
   "musictheory.toc"
-  "musictheory.idx"
+  "musictheory.aux"
   "musictheory.log"
+  "musictheory.out"
+  "musictheory.idx"
+  "musictheory.pdf"
