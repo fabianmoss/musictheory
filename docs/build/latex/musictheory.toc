@@ -17,21 +17,21 @@
 \contentsline {section}{\numberline {2.3}Intervals}{7}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}GISs}{7}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Pitch\sphinxhyphen {}Class Sets}{7}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Normal Form}{7}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Transposition}{7}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.1}Normal Form}{8}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Transposition}{8}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Inversion}{8}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Index number}{8}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Set Class}{8}{subsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.4.6}Prime Form}{8}{subsection.2.4.6}%
-\contentsline {section}{\numberline {2.5}Western tonal music}{8}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}The diatonic scale}{8}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.5}Western tonal music}{9}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}The diatonic scale}{9}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Modes}{9}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Keys}{9}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Other scales}{9}{subsection.2.5.4}%
 \contentsline {section}{\numberline {2.6}Time}{9}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Notes}{9}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Rhythm}{9}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Meter}{9}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.2}Rhythm}{10}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Meter}{10}{subsection.2.6.3}%
 \contentsline {subsection}{\numberline {2.6.4}Musical time vs. performance time}{10}{subsection.2.6.4}%
 \contentsline {section}{\numberline {2.7}Notes on Segmentation}{10}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Indices and tables}{11}{chapter.3}%

@@ -7,6 +7,7 @@
 
 import numpy as np
 import re
+from fractions import Fraction
 
 def UnsupportedOperands(op, type1, type2):
     def as_type(x):
@@ -28,6 +29,7 @@ class Interval:
         self.specific_interval = self.get_specific_interval()
         self.euclidean_distance = self.get_euclidean_distance()
         self.interval_name = self.get_interval_name()
+        self.frequency_ratio = self.get_frequency_ratio()
 
     def get_euclidean_distance(self, precision=2):
         '''
@@ -93,6 +95,21 @@ class Interval:
                 return 1
         else:
             return np.abs(g)
+
+    def get_frequency_ratio(self):
+        """Frequency ratio of the interval.
+        Needs :py:class:`fractions.Fraction` class.
+
+        Returns:
+            Frac -- Integer ratio of the interval.
+        """
+        num = 2 ** self.source.euler_coordinate[0] * \
+              3 ** self.source.euler_coordinate[1] * \
+              5 ** self.source.euler_coordinate[2]
+        den = 2 ** self.target.euler_coordinate[0] * \
+              3 ** self.target.euler_coordinate[1] * \
+              5 ** self.target.euler_coordinate[2]
+        return Fraction(num, den)
     
     def get_specific_interval(self, directed=True, octaves=True):
         """

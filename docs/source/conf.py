@@ -40,11 +40,13 @@ extensions = [
     'sphinx.ext.coverage', 
     'sphinx.ext.napoleon',
     'sphinx.ext.mathjax',
+    'sphinx.ext.intersphinx'
     # 'sphinxcontrib.lilypond'
     # 'sphinxcontrib.bibtex'
 ]
 
 mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
 
 # # configures bibliography
 # # see http://wnielson.bitbucket.org/projects/sphinx-natbib/

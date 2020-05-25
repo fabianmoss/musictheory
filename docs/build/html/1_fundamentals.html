@@ -72,6 +72,11 @@ class for this</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">Tone</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>A shorter way to initialize a tone is by just passing a triple to the class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Tone</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>From this representation we can derive a variety of others, corrsponding to transformations of
 tonal space.</p>
 </div>
@@ -137,6 +142,32 @@ do calculations with pitch classes.</p>
 </div>
 <div class="section" id="intervals">
 <h2><span class="section-number">2.3. </span>Intervals<a class="headerlink" href="#intervals" title="Permalink to this headline">¶</a></h2>
+<p>We can add an interval to a tone:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># G</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># F</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Tone</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># A</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">)</span> <span class="c1"># +M3</span>
+
+<span class="n">t</span> <span class="o">+</span> <span class="n">i</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">B</span>
+</pre></div>
+</div>
+<p>Analogously, we can also substract an interval from a tone:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">-</span> <span class="n">i</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Eb</span>
+</pre></div>
+</div>
+<p>Moreover, we can add or substract intervals from each other:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">j</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="c1"># +m6</span>
+
+<span class="n">i</span> <span class="o">+</span> <span class="n">j</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">P8</span>
+
+<span class="n">i</span> <span class="o">-</span> <span class="n">j</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="n">A4</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>Pitch intervals</p></li>
 <li><p>Ordered pitch-class intervals (-&gt; rather directed)</p></li>

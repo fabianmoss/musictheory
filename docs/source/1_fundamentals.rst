@@ -50,6 +50,13 @@ Printing this tone will give us the common name.
    t
    >>> Tone(C)
 
+A shorter way to initialize a tone is by just passing a triple to the class:
+
+.. code::
+
+   g = Tone(0,1,0)
+   >>> Tone(G)
+
 From this representation we can derive a variety of others, corrsponding to transformations of 
 tonal space.
 
@@ -129,6 +136,38 @@ Tuning / Temperament
 
 Intervals
 ---------
+
+We can add an interval to a tone:
+
+.. code::
+
+   t = Tone(0,1,0) # G 
+   
+   f = Tone(0,-1,0) # F 
+   a = Tone(0,-1,1) # A 
+   i = Interval(f,a) # +M3
+
+   t + i 
+   >>> B 
+
+Analogously, we can also substract an interval from a tone: 
+
+.. code::
+
+   t - i
+   >>> Eb
+
+Moreover, we can add or substract intervals from each other: 
+
+.. code::
+
+   j = Interval(a, f) # +m6
+
+   i + j 
+   >>> P8 
+
+   i - j 
+   >>> -A4
 
 - Pitch intervals
 - Ordered pitch-class intervals (-> rather directed)

@@ -311,6 +311,13 @@ Printing this tone will give us the common name.
 \PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{Tone}\PYG{p}{(}\PYG{n}{C}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+A shorter way to initialize a tone is by just passing a triple to the class:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{g} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{Tone}\PYG{p}{(}\PYG{n}{G}\PYG{p}{)}
+\end{sphinxVerbatim}
+
 From this representation we can derive a variety of others, corrsponding to transformations of
 tonal space.
 
@@ -392,7 +399,39 @@ OPTIC
 \label{\detokenize{1_fundamentals:tuning-temperament}}
 
 \section{Intervals}
-\label{\detokenize{1_fundamentals:intervals}}\begin{itemize}
+\label{\detokenize{1_fundamentals:intervals}}
+We can add an interval to a tone:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} G}
+
+\PYG{n}{f} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} F}
+\PYG{n}{a} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} A}
+\PYG{n}{i} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,}\PYG{n}{a}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} +M3}
+
+\PYG{n}{t} \PYG{o}{+} \PYG{n}{i}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{B}
+\end{sphinxVerbatim}
+
+Analogously, we can also substract an interval from a tone:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{t} \PYG{o}{\PYGZhy{}} \PYG{n}{i}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{Eb}
+\end{sphinxVerbatim}
+
+Moreover, we can add or substract intervals from each other:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{j} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{f}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} +m6}
+
+\PYG{n}{i} \PYG{o}{+} \PYG{n}{j}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{P8}
+
+\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{n}{j}
+\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZhy{}}\PYG{n}{A4}
+\end{sphinxVerbatim}
+\begin{itemize}
 \item {} 
 Pitch intervals
 
@@ -967,7 +1006,7 @@ int
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{m}
-\item\relax\sphinxstyleindexentry{musictheory}\sphinxstyleindexpageref{api:\detokenize{module-musictheory}}
+\item\relax\sphinxstyleindexentry{musictheory}\sphinxstyleindexpageref{1_fundamentals:\detokenize{module-musictheory}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}

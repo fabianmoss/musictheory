@@ -283,8 +283,10 @@ INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\couri
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrb8r.tfm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrb8t.tfm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrro8t.tfm
+INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\courier\pcrro8t.vf
+INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrro8r.tfm
+INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrb8t.tfm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt0900.tfm
@@ -293,8 +295,6 @@ INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tctt0900.tfm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\courier\pcrb8t.vf
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrb8r.tfm
-INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\courier\pcrro8t.vf
-INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrro8r.tfm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri8c.tfm
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmri8c.vf
 INPUT C:\Users\fabianmoss\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd

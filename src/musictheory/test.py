@@ -16,6 +16,7 @@ if __name__ == "__main__":
 
     print(c + j, c - j)
     print(i+j, i-j)
+    print(i.frequency_ratio)
 
     # print(s.label, t.label)
     # print(i.interval)
