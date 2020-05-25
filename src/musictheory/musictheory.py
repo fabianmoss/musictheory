@@ -247,7 +247,7 @@ class Tone:
             >>> t.get_frequency(precision=3)
             261.626
         '''
-        f = 440 * 2 ** ((self.midi_pitch - 69)/12)
+        f = chamber_tone * 2 ** ((self.midi_pitch - 69)/12)
         return round(f, precision)
 
     def get_name(self):

@@ -74,6 +74,14 @@ oscillations per second.
 - frequency ratios 
 - logarithm: multiplication => addition
 
+In order to determine the `frequency` of a tone, it is necessary to define a reference point.
+This reference point, also called the `Kammerton` is nowadays set to :math:`\text{A}4=440\text{Hz}`, 
+i.e. the frequency of the tone ``A4_`` is 440 oscillations per seconds. If :math:`m` is the MIDI 
+number of the tone in questions, then
+
+.. math:: 
+   f = K \cdot 2^{(m - 69)/12}
+
 The frequency of a tone can be accessed via the :py:meth:`Tone.get_frequency()` method.
 attribute:
 
@@ -81,6 +89,13 @@ attribute:
 
    t.get_frequency()
    >>> 261.63
+
+Changing the chamber tone will, of course, change the frequency for each tone:
+
+.. code::
+
+   t.get_frequency(chamber_tone=442.0)
+   >>> 392.0
 
 Octave equivalence
 ~~~~~~~~~~~~~~~~~~
@@ -129,6 +144,24 @@ by an integer :math:`k \in \mathbb{Z}_{12}`.
 
 and usually one sets :math:`0\equiv \text{C}`. This allows to use *modular arithmetic*
 do calculations with pitch classes.
+
+MIDI
+~~~~
+
+The Musical Instrument Digital Interface format (MIDI_) was developed to communicate
+between electronic musical instruments. Each pitch class (assuming enharmonic but not 
+octave equivalence) is represented by an integer between 0 and 127, and the MIDI number
+for pitch C4 is set to 60. Increasing a MIDI number corresponds to the number of semitones.
+Since an octave contains twelve semitones, a fifth contains seven semitones, and a major 
+third contains four semitones, we can determine the MIDI pitch number for any tone `t`
+by multiplying its Euler coordinates with the respective number of semitones and add it to 
+the MIDI pitch for the tonal center (60).
+
+.. _MIDI: https://de.wikipedia.org/wiki/Musical_Instrument_Digital_Interface
+
+.. math::
+   
+   m = 60 + 12 \cdot o + 7 \cdot f + 4 \cdot t
 
 Other invariances
 ~~~~~~~~~~~~~~~~~

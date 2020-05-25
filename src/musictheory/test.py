@@ -3,12 +3,14 @@ import numpy as np
 
 if __name__ == "__main__":
     c = Tone(0,0,0)
+    g = Tone(0,1,0)
     s = Tone(1,-1,1) 
     t = Tone(0,2,0) 
     i = Interval(source=c,target=s)
     j = Interval(source=c, target=t)
     
     print(i.get_frequency_ratio())
+    print(g.frequency)
 
     # print(c + j, c - j)
     # print(i+j, i-j)
