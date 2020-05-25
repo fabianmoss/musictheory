@@ -23,7 +23,7 @@ class Interval:
         self.source = source
         self.target = target
 
-        self.interval = self.target.euler_coordinate - self.source.euler_coordinate
+        self.euler_coordinate = self.target.euler_coordinate - self.source.euler_coordinate
         self.generic_interval = self.get_generic_interval()
         self.specific_interval = self.get_specific_interval()
         self.euclidean_distance = self.get_euclidean_distance()
@@ -78,7 +78,7 @@ class Interval:
             >>> i3.generic_interval(directed=False)
             13
         """
-        g = 7 * self.interval[0] + 4 * self.interval[1] + 2 * self.interval[2]
+        g = 7 * self.euler_coordinate[0] + 4 * self.euler_coordinate[1] + 2 * self.euler_coordinate[2]
         
         if not octaves:
             g = g % 12
@@ -117,7 +117,7 @@ class Interval:
             5
 
         """
-        s = (((12 * self.interval[0]) + 7 * self.interval[1] % 12) + (4 * self.interval[2] % 12))
+        s = (((12 * self.euler_coordinate[0]) + 7 * self.euler_coordinate[1] % 12) + (4 * self.euler_coordinate[2] % 12))
         if not octaves:
             s = s % 12
 
@@ -151,13 +151,13 @@ class Interval:
 
     def __add__(self, other):
         if isinstance(other, Interval):
-            return Interval(Tone(0,0,0), Tone(*(self.interval + other.interval)))
+            return Interval(Tone(0,0,0), Tone(*(self.euler_coordinate + other.euler_coordinate)))
         else:
             raise UnsupportedOperands('+', self, other)
 
     def __sub__(self, other):
         if isinstance(other, Interval):
-            return Interval(Tone(0,0,0), Tone(*(self.interval - other.interval)))
+            return Interval(Tone(0,0,0), Tone(*(self.euler_coordinate - other.euler_coordinate)))
         else:
             raise UnsupportedOperands('-', self, other)
         
@@ -336,13 +336,13 @@ class Tone:
 
     def __add__(self, other):
         if isinstance(other, Interval):
-            return Tone(*(self.euler_coordinate + other.interval))
+            return Tone(*(self.euler_coordinate + other.euler_coordinate))
         else:
             raise UnsupportedOperands('+', self, other)
 
     def __sub__(self, other):
         if isinstance(other, Interval):
-            return Tone(*(self.euler_coordinate - other.interval))
+            return Tone(*(self.euler_coordinate - other.euler_coordinate))
         else:
             raise UnsupportedOperands('-', self, other)
 

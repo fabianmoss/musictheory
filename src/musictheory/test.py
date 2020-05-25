@@ -11,8 +11,8 @@ if __name__ == "__main__":
     print(c)
     print(c.euler_coordinate)
     print(j)
-    print(j.interval)
-    print(-j.interval)
+    print(j.euler_coordinate)
+    print(-j.euler_coordinate)
 
     print(c + j, c - j)
     print(i+j, i-j)
