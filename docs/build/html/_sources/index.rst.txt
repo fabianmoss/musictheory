@@ -9,10 +9,11 @@ Welcome!
 This is not a pedagogical resource for basic music theory concepts
 but an in-depth introduction into the structures of Western music,
 built axiomatically from tones and their relations.
-The logo, a `hemidemisemiquaver`_ (or a sixty-fourth note), 
-symbolically reflects this level of difficulty. 
+The logo, a `longa`_ (or a quadruple whole note), 
+symbolically reflects this level of difficulty. since it is the longest
+note value in Western music notation.
 
-.. _hemidemisemiquaver: https://en.wikipedia.org/wiki/Sixty-fourth_note
+.. _longa: https://en.wikipedia.org/wiki/Longa_(music)
 
 This project is inspired by a number of great books, e.g.
 

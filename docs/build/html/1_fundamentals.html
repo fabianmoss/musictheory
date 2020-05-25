@@ -79,6 +79,8 @@ class for this</p>
 </div>
 <p>From this representation we can derive a variety of others, corrsponding to transformations of
 tonal space.</p>
+<p>Tone triples can be assigned a more-readable label, e.g. <code class="docutils literal notranslate"><span class="pre">C4'</span></code>, <code class="docutils literal notranslate"><span class="pre">Dbb2,,</span></code>.</p>
+<p>Regular expression: <code class="regexp docutils literal notranslate"><span class="pre">[A-G](#|b)*d(,|')+</span></code>.</p>
 </div>
 <div class="section" id="frequencies">
 <h3><span class="section-number">2.1.2. </span>Frequencies<a class="headerlink" href="#frequencies" title="Permalink to this headline">¶</a></h3>
@@ -159,11 +161,12 @@ do calculations with pitch classes.</p>
 </pre></div>
 </div>
 <p>Moreover, we can add or substract intervals from each other:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;j = Interval(a, f) # +m6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="c1"># +m6</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span>
 <span class="go">P8</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">-</span> <span class="n">j</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">-</span> <span class="n">j</span>
 <span class="go">-A4</span>
 </pre></div>
 </div>
@@ -245,10 +248,8 @@ than <em>chord inversion</em> with which we will deal in later chapters.</p>
 <p>[Diagram of relations between different representations.]</p>
 </div>
 </div>
-<div class="section" id="western-tonal-music">
-<h2><span class="section-number">2.5. </span>Western tonal music<a class="headerlink" href="#western-tonal-music" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-diatonic-scale">
-<h3><span class="section-number">2.5.1. </span>The diatonic scale<a class="headerlink" href="#the-diatonic-scale" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">2.5. </span>The diatonic scale<a class="headerlink" href="#the-diatonic-scale" title="Permalink to this headline">¶</a></h2>
 <p>Music in the Western tradition fundamentally builds on
 so-called <em>diatonic</em> scales, an arrangement of seven tones
 that are named with latin letters from A to G. “Diatonic” can
@@ -271,15 +272,13 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
 \text{B}: \hat{6}\\
 \text{C}: \hat{7}\\\end{split}\]</div>
 </div>
-<div class="section" id="modes">
-<h3><span class="section-number">2.5.2. </span>Modes<a class="headerlink" href="#modes" title="Permalink to this headline">¶</a></h3>
-<p>scale plus order plus hierarchy (but order already defined above?)</p>
-</div>
-<div class="section" id="keys">
-<h3><span class="section-number">2.5.3. </span>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h3>
-</div>
 <div class="section" id="other-scales">
-<h3><span class="section-number">2.5.4. </span>Other scales<a class="headerlink" href="#other-scales" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">2.6. </span>Other scales<a class="headerlink" href="#other-scales" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pentatonic">
+<h3><span class="section-number">2.6.1. </span>Pentatonic<a class="headerlink" href="#pentatonic" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="scales-based-on-chromaticism">
+<h3><span class="section-number">2.6.2. </span>Scales based on chromaticism<a class="headerlink" href="#scales-based-on-chromaticism" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>chromatic</p></li>
 <li><p>hexatonic</p></li>
@@ -288,27 +287,41 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
 </ul>
 </div>
 </div>
+<div class="section" id="modes">
+<h2><span class="section-number">2.7. </span>Modes<a class="headerlink" href="#modes" title="Permalink to this headline">¶</a></h2>
+<p>scale plus order plus hierarchy (but order already defined above?)</p>
+<p>Different terminologies:</p>
+<ul class="simple">
+<li><p>Messiaen’s Modes</p></li>
+<li><p>Church modes</p></li>
+<li><p>Indian modes (ragas)</p></li>
+<li><p>other modes?</p></li>
+</ul>
+</div>
+<div class="section" id="keys">
+<h2><span class="section-number">2.8. </span>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="time">
-<h2><span class="section-number">2.6. </span>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.9. </span>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="notes">
-<h3><span class="section-number">2.6.1. </span>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.9.1. </span>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
 <p>(Tones + Duration)
 blablabla…</p>
 </div>
 <div class="section" id="rhythm">
-<h3><span class="section-number">2.6.2. </span>Rhythm<a class="headerlink" href="#rhythm" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.9.2. </span>Rhythm<a class="headerlink" href="#rhythm" title="Permalink to this headline">¶</a></h3>
 <p>(Duration patterns)</p>
 </div>
 <div class="section" id="meter">
-<h3><span class="section-number">2.6.3. </span>Meter<a class="headerlink" href="#meter" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.9.3. </span>Meter<a class="headerlink" href="#meter" title="Permalink to this headline">¶</a></h3>
 <p>(Hierarchy)</p>
 </div>
 <div class="section" id="musical-time-vs-performance-time">
-<h3><span class="section-number">2.6.4. </span>Musical time vs. performance time<a class="headerlink" href="#musical-time-vs-performance-time" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.9.4. </span>Musical time vs. performance time<a class="headerlink" href="#musical-time-vs-performance-time" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="notes-on-segmentation">
-<h2><span class="section-number">2.7. </span>Notes on Segmentation<a class="headerlink" href="#notes-on-segmentation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.10. </span>Notes on Segmentation<a class="headerlink" href="#notes-on-segmentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Straus 2005</p></li>
 <li><p>Hanninen 2012</p></li>
@@ -325,7 +338,7 @@ blablabla…</p>
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="index.html">
-    <img class="logo" src="_static/logo2.png" alt="Logo"/>
+    <img class="logo" src="_static/longa.png" alt="Logo"/>
     
   </a>
 </p>
@@ -345,9 +358,12 @@ blablabla…</p>
 <li class="toctree-l2"><a class="reference internal" href="#pitch-classes">2.2. Pitch classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#intervals">2.3. Intervals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pitch-class-sets">2.4. Pitch-Class Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#western-tonal-music">2.5. Western tonal music</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#time">2.6. Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#notes-on-segmentation">2.7. Notes on Segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-diatonic-scale">2.5. The diatonic scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-scales">2.6. Other scales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modes">2.7. Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keys">2.8. Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#time">2.9. Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-segmentation">2.10. Notes on Segmentation</a></li>
 </ul>
 </li>
 </ul>

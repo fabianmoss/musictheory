@@ -301,7 +301,7 @@ class for this
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{from} \PYG{n+nn}{musictheory} \PYG{k+kn}{import} \PYG{n}{Tone}
 
-\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{n}{o}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{q}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{t}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{n}{t} \PYG{o}{=} \PYG{n}{Tone}\PYG{p}{(}\PYG{n}{octave}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{fifth}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{third}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 Printing this tone will give us the common name.
@@ -320,6 +320,10 @@ A shorter way to initialize a tone is by just passing a triple to the class:
 
 From this representation we can derive a variety of others, corrsponding to transformations of
 tonal space.
+
+Tone triples can be assigned a more\sphinxhyphen{}readable label, e.g. \sphinxcode{\sphinxupquote{C4\textquotesingle{}}}, \sphinxcode{\sphinxupquote{Dbb2,,}}.
+
+Regular expression: \sphinxcode{\sphinxupquote{{[}A\sphinxhyphen{}G{]}(\#|b)*d(,|\textquotesingle{})+}}.
 
 
 \subsection{Frequencies}
@@ -423,10 +427,12 @@ Analogously, we can also substract an interval from a tone:
 Moreover, we can add or substract intervals from each other:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+go}{\PYGZgt{}\PYGZgt{}\PYGZgt{}j = Interval(a, f) \PYGZsh{} +m6}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{j} \PYG{o}{=} \PYG{n}{Interval}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{f}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} +m6}
 \PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i} \PYG{o}{+} \PYG{n}{j}
 \PYG{g+go}{P8}
+\end{sphinxVerbatim}
 
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{n}{j}
 \PYG{g+go}{\PYGZhy{}A4}
 \end{sphinxVerbatim}
@@ -554,10 +560,7 @@ Transformations between representations of tones are actually \sphinxstyleemphas
 {[}Diagram of relations between different representations.{]}
 
 
-\section{Western tonal music}
-\label{\detokenize{1_fundamentals:western-tonal-music}}
-
-\subsection{The diatonic scale}
+\section{The diatonic scale}
 \label{\detokenize{1_fundamentals:the-diatonic-scale}}
 Music in the Western tradition fundamentally builds on
 so\sphinxhyphen{}called \sphinxstyleemphasis{diatonic} scales, an arrangement of seven tones
@@ -585,16 +588,14 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
 \text{C}: \hat{7}\\\end{split}
 \end{equation*}
 
-\subsection{Modes}
-\label{\detokenize{1_fundamentals:modes}}
-scale plus order plus hierarchy (but order already defined above?)
+\section{Other scales}
+\label{\detokenize{1_fundamentals:other-scales}}
 
+\subsection{Pentatonic}
+\label{\detokenize{1_fundamentals:pentatonic}}
 
-\subsection{Keys}
-\label{\detokenize{1_fundamentals:keys}}
-
-\subsection{Other scales}
-\label{\detokenize{1_fundamentals:other-scales}}\begin{itemize}
+\subsection{Scales based on chromaticism}
+\label{\detokenize{1_fundamentals:scales-based-on-chromaticism}}\begin{itemize}
 \item {} 
 chromatic
 
@@ -609,6 +610,30 @@ whole tone
 
 \end{itemize}
 
+
+\section{Modes}
+\label{\detokenize{1_fundamentals:modes}}
+scale plus order plus hierarchy (but order already defined above?)
+
+Different terminologies:
+\begin{itemize}
+\item {} 
+Messiaen’s Modes
+
+\item {} 
+Church modes
+
+\item {} 
+Indian modes (ragas)
+
+\item {} 
+other modes?
+
+\end{itemize}
+
+
+\section{Keys}
+\label{\detokenize{1_fundamentals:keys}}
 
 \section{Time}
 \label{\detokenize{1_fundamentals:time}}

@@ -60,6 +60,10 @@ A shorter way to initialize a tone is by just passing a triple to the class:
 From this representation we can derive a variety of others, corrsponding to transformations of 
 tonal space.
 
+Tone triples can be assigned a more-readable label, e.g. ``C4'``, ``Dbb2,,``.
+
+Regular expression: :regexp:`[A-G](#|b)*\d(,|')+`.
+
 Frequencies
 ~~~~~~~~~~~
 
@@ -161,9 +165,11 @@ Moreover, we can add or substract intervals from each other:
 
 .. code::
 
-   >>>j = Interval(a, f) # +m6
+   >>> j = Interval(a, f) # +m6
    >>> i + j 
    P8 
+
+.. code::
 
    >>> i - j 
    -A4
@@ -249,11 +255,11 @@ Transformations between representations of tones are actually *transformations o
 
 [Diagram of relations between different representations.]
 
-Western tonal music
--------------------
+.. Western tonal music
+   -------------------
 
 The diatonic scale
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Music in the Western tradition fundamentally builds on
 so-called *diatonic* scales, an arrangement of seven tones
@@ -281,21 +287,34 @@ as distance to this tone. Scale degrees are commonly notated with arabic numbers
    \text{B}: \hat{6}\\
    \text{C}: \hat{7}\\
 
-Modes
-~~~~~
-
-scale plus order plus hierarchy (but order already defined above?)
-
-Keys
-~~~~
-
 Other scales
-~~~~~~~~~~~~
+------------
+
+Pentatonic
+~~~~~~~~~~
+
+Scales based on chromaticism
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - chromatic
 - hexatonic
 - octatonic
 - whole tone
+
+Modes
+-----
+
+scale plus order plus hierarchy (but order already defined above?)
+
+Different terminologies: 
+
+- Messiaen's Modes
+- Church modes 
+- Indian modes (ragas)
+- other modes?
+
+Keys
+----
 
 Time
 ----
