@@ -5,8 +5,8 @@
 \indexentry{Tone (class in musictheory)@\spxentry{Tone}\spxextra{class in musictheory}|hyperpage}{13}
 \indexentry{get\_accidentals() (musictheory.Tone method)@\spxentry{get\_accidentals()}\spxextra{musictheory.Tone method}|hyperpage}{13}
 \indexentry{get\_frequency() (musictheory.Tone method)@\spxentry{get\_frequency()}\spxextra{musictheory.Tone method}|hyperpage}{13}
-\indexentry{get\_label() (musictheory.Tone method)@\spxentry{get\_label()}\spxextra{musictheory.Tone method}|hyperpage}{14}
 \indexentry{get\_midi\_pitch() (musictheory.Tone method)@\spxentry{get\_midi\_pitch()}\spxextra{musictheory.Tone method}|hyperpage}{14}
+\indexentry{get\_name() (musictheory.Tone method)@\spxentry{get\_name()}\spxextra{musictheory.Tone method}|hyperpage}{14}
 \indexentry{get\_pitch\_class() (musictheory.Tone method)@\spxentry{get\_pitch\_class()}\spxextra{musictheory.Tone method}|hyperpage}{14}
 \indexentry{get\_step() (musictheory.Tone method)@\spxentry{get\_step()}\spxextra{musictheory.Tone method}|hyperpage}{15}
 \indexentry{get\_syntonic() (musictheory.Tone method)@\spxentry{get\_syntonic()}\spxextra{musictheory.Tone method}|hyperpage}{15}
