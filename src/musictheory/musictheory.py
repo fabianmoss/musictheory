@@ -23,7 +23,7 @@ class Interval:
         self.source = source
         self.target = target
 
-        self.interval = target.euler_coordinate - source.euler_coordinate
+        self.interval = self.target.euler_coordinate - self.source.euler_coordinate
         self.generic_interval = self.get_generic_interval()
         self.specific_interval = self.get_specific_interval()
         self.euclidean_distance = self.get_euclidean_distance()
@@ -143,29 +143,23 @@ class Interval:
         name = direction + quality + size
         return name
 
-    def get_euler_coordinates(self):
-        return self.target - self.source
-
-
     def __repr__(self):
         return f"Interval({self.interval_name})"
 
     def __str__(self):
         return self.interval_name
 
-    # def __sub__(self, other):
-    #     if isinstance(other, Interval):
-    #         return Interval(self.get_euler_coordinates(), - other.get_euler_coordinates())
-    #     else:
-    #         raise UnsupportedOperands('-', self, other)
+    def __sub__(self, other):
+        if isinstance(other, Interval):
+            return Interval(Tone(0,0,0), Tone(*(self.interval - other.interval)))
+        else:
+            raise UnsupportedOperands('-', self, other)
 
-    # def __add__(self, other):
-    #     if isinstance(other, Interval):
-    #         return Interval(self.get_euler_coordinates(), other.get_euler_coordinates())
-    #     else:
-    #         raise UnsupportedOperands('+', self, other)
-
-
+    def __add__(self, other):
+        if isinstance(other, Interval):
+            return Interval(Tone(0,0,0), Tone(*(self.interval + other.interval)))
+        else:
+            raise UnsupportedOperands('+', self, other)
 
         
 class Tone:
@@ -180,13 +174,13 @@ class Tone:
         self.fifth = fifth
         self.third = third
         self.euler_coordinate = np.asarray((self.octave, self.fifth, self.third))
-        self.fifths_pos = fifth + 4 * third
+        self.fifths_pos = self.fifth + 4 * self.third
 
-        # names and labels
+        # parts and name
         self.accidentals = self.get_accidentals()
         self.step = self.get_step()
         self.syntonic = self.get_syntonic()
-        self.label = self.get_label()
+        self.name = self.get_name()
 
         # other representations
         self.midi_pitch = self.get_midi_pitch()
@@ -230,9 +224,9 @@ class Tone:
         f = 440 * 2 ** ((self.midi_pitch - 69)/12)
         return round(f, precision)
 
-    def get_label(self):
+    def get_name(self):
         '''
-        Gets the complete label of the tone, consisting of its note name, syntonic position, and octave.
+        Gets the complete name of the tone, consisting of its step, syntonic position, and octave.
 
         Args:
             None
@@ -243,7 +237,7 @@ class Tone:
         Example:
             >>> c = Tone(0,0,0)
             >>> ab = Tone(0,1,-1)
-            >>> c.get_label(), ab.get_label()
+            >>> c.get_name(), ab.get_name()
             `C_0` `Ab,1`
 
         '''

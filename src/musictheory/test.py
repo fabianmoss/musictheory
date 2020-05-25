@@ -2,14 +2,16 @@ from musictheory import Tone, Interval
 import numpy as np
 
 if __name__ == "__main__":
-    s = Tone(0,-1,-1) # C_0
-    t = Tone(0,2,1) # F#'0
     c = Tone(0,0,0)
+    s = Tone(0,1,0) # C_0
+    t = Tone(0,2,1) # F#'0
     i = Interval(source=c,target=s)
     j = Interval(source=s, target=t)
     
-    t + i
-
+    # print(i + j)
+    print(i.source, i.target)
+    print(i+j)
+    print(j-i)
 
     # print(s.label, t.label)
     # print(i.interval)
