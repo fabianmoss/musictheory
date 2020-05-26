@@ -218,6 +218,7 @@ We can add an interval to a tone:
 
 .. code::
 
+   >>> from musictheory import Tone, Interval
    >>> t = Tone(0,1,0) # G 
    
    >>> f = Tone(0,-1,0) # F 
