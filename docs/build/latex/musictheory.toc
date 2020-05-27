@@ -3,44 +3,47 @@
 \contentsline {section}{\numberline {1.1}What is CM?}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Quickstart}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Notes}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Acknowledgements}{4}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Fundamentals I}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Tones}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Euler Space}{5}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Equivalences}{6}{subsection.2.1.2}%
-\contentsline {subsubsection}{Octave equivalence}{6}{subsubsection*.3}%
-\contentsline {subsubsection}{Pythagorean}{6}{subsubsection*.4}%
-\contentsline {subsubsection}{Enharmonic equivalence}{6}{subsubsection*.5}%
-\contentsline {subsubsection}{Pitch classes}{7}{subsubsection*.6}%
-\contentsline {subsection}{\numberline {2.1.3}Frequencies}{7}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}MIDI}{7}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Tuning / Temperament}{8}{subsection.2.1.5}%
-\contentsline {section}{\numberline {2.2}Intervals}{8}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}GISs}{8}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Pitch\sphinxhyphen {}Class Sets}{8}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Normal Form}{9}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Transposition}{9}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Inversion}{9}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Index number}{9}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Set Class}{9}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Prime Form}{9}{subsection.2.3.6}%
-\contentsline {chapter}{\numberline {3}Fundamentals II}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}The diatonic scale}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Other scales}{11}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Pentatonic}{11}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Scales based on chromaticism}{11}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Modes}{12}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Keys}{12}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Time}{12}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Notes}{12}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Rhythm}{12}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Meter}{12}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Musical time vs. performance time}{12}{subsection.3.5.4}%
-\contentsline {section}{\numberline {3.6}Notes on Segmentation}{12}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Indices and tables}{13}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Developers}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}API Reference \sphinxhyphen {} musictheory}{15}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Tone}{15}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Interval}{17}{subsection.5.1.2}%
-\contentsline {chapter}{Python Module Index}{21}{section*.20}%
-\contentsline {chapter}{Index}{23}{section*.21}%
+\contentsline {section}{\numberline {1.4}Related work}{4}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Books}{4}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Libraries}{4}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Acknowledgements}{5}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Fundamentals I}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tones}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Euler Space}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Equivalences}{8}{subsection.2.1.2}%
+\contentsline {subsubsection}{Octave equivalence}{8}{subsubsection*.3}%
+\contentsline {subsubsection}{Pythagorean}{8}{subsubsection*.4}%
+\contentsline {subsubsection}{Enharmonic equivalence}{8}{subsubsection*.5}%
+\contentsline {subsubsection}{Pitch classes}{9}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {2.1.3}Frequencies}{9}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}MIDI}{9}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Tuning / Temperament}{10}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Intervals}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}GISs}{10}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Pitch\sphinxhyphen {}Class Sets}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Normal Form}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Transposition}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Inversion}{11}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Index number}{11}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Set Class}{11}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Prime Form}{11}{subsection.2.3.6}%
+\contentsline {chapter}{\numberline {3}Fundamentals II}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The diatonic scale}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Other scales}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Pentatonic}{13}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Scales based on chromaticism}{13}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Modes}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Keys}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Time}{14}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Notes}{14}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Rhythm}{14}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Meter}{14}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Musical time vs. performance time}{14}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Notes on Segmentation}{14}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Indices and tables}{15}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Developers}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}API Reference \sphinxhyphen {} musictheory}{17}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Tone}{17}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Interval}{19}{subsection.5.1.2}%
+\contentsline {chapter}{Python Module Index}{23}{section*.20}%
+\contentsline {chapter}{Index}{25}{section*.21}%

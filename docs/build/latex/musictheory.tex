@@ -72,7 +72,7 @@
 
 
 \title{musictheory}
-\date{May 25, 2020}
+\date{May 27, 2020}
 \release{0.0.1}
 \author{Fabian C.\@{} Moss}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -100,38 +100,6 @@ built axiomatically from tones and their relations.
 The logo, a \sphinxhref{https://en.wikipedia.org/wiki/Longa\_(music)}{longa} (or a quadruple whole note),
 symbolically reflects this level of difficulty. since it is the longest
 note value in Western music notation.
-
-This project is inspired by a number of great books, e.g.
-\begin{itemize}
-\item {} 
-Aldwell \& Schachter (2010). \sphinxstyleemphasis{Harmony and Voice Leading}.
-
-\item {} 
-Cadwallader \& Gagné (1998). \sphinxstyleemphasis{Analysis of Tonal Music. A Schenkerian Approach}.
-
-\item {} 
-Forte (1977). \sphinxstyleemphasis{The Structure of Atonal Music}.
-
-\item {} 
-Lewin (1987). \sphinxstyleemphasis{Generalized Intervals and Transformations}.
-
-\item {} 
-Müller (2015). \sphinxstyleemphasis{Fundamentals of Music Processing}.
-
-\item {} 
-Straus (2005). \sphinxstyleemphasis{Introduction to Post\sphinxhyphen{}Tonal Theory}.
-
-\end{itemize}
-
-What is new and unique about the approach taken here is that we take
-a computational perspective and implement all introduced concepts.
-This does not only provide us with sharp and unequivocal definitions,
-but also allows us to scale music theory up from the analysis of individual
-bars, sections, or pieces to that of entire repertoires and corpora!
-
-I recently also discovered \sphinxhref{https://pedrokroger.net/mfgan/}{Music for Geeks and Nerds} by Pedro Kroger
-which looks very interesting.
-The Python project \sphinxhref{https://github.com/gciruelos/musthe}{musthe} also seems to pursue a similar goal.
 
 \begin{sphinxadmonition}{note}{Note:}
 Since this is ongoing work, I can give no guarantee for completeness or accuracy.
@@ -250,6 +218,76 @@ visualisations (pitch\sphinxhyphen{}time plots)
 \sphinxhyphen{} different keys (not only treble and bass)
 
 \end{itemize}
+
+
+\section{Related work}
+\label{\detokenize{1_intro:related-work}}
+
+\subsection{Books}
+\label{\detokenize{1_intro:books}}
+This project is inspired by a number of great books, e.g.
+\begin{itemize}
+\item {} 
+Aldwell \& Schachter (2010). \sphinxstyleemphasis{Harmony and Voice Leading}.
+
+\item {} 
+Cadwallader \& Gagné (1998). \sphinxstyleemphasis{Analysis of Tonal Music. A Schenkerian Approach}.
+
+\item {} 
+Forte (1977). \sphinxstyleemphasis{The Structure of Atonal Music}.
+
+\item {} 
+Lewin (1987). \sphinxstyleemphasis{Generalized Intervals and Transformations}.
+
+\item {} 
+Müller (2015). \sphinxstyleemphasis{Fundamentals of Music Processing}.
+
+\item {} 
+Straus (2005). \sphinxstyleemphasis{Introduction to Post\sphinxhyphen{}Tonal Theory}.
+
+\end{itemize}
+
+What is new and unique about the approach taken here is that we take
+a computational perspective and implement all introduced concepts.
+This does not only provide us with sharp and unequivocal definitions,
+but also allows us to scale music theory up from the analysis of individual
+bars, sections, or pieces to that of entire repertoires and corpora!
+
+
+\subsection{Libraries}
+\label{\detokenize{1_intro:libraries}}\subsubsection*{music21}
+
+\sphinxhref{https://web.mit.edu/music21/}{music21}, developed by \sphinxstylestrong{Mike Cuthbert} at MIT, is
+a very popular and powerful Python library for
+computational applications in music theory.
+
+TBC…
+\subsubsection*{Music for Geeks and Nerds and pyknon}
+
+I recently also discovered \sphinxhref{https://pedrokroger.net/mfgan/}{Music for Geeks and Nerds} by \sphinxstylestrong{Pedro Kroger}
+which looks very interesting. It is based on \sphinxhref{http://kroger.github.io/pyknon/}{pyknon}, a library for creating
+MIDI files.
+\subsubsection*{musthe}
+
+The Python project \sphinxhref{https://github.com/gciruelos/musthe}{musthe} also seems to pursue a similar goal and
+deals with basic musical objects, such as notes, chords, and scales.
+Its basic functionality is similar to the approach taken here, but its
+scope is limited because it fundamentally builds on the chromatic scale
+as the basic representation of notes.
+
+The project presented here is more general then the latter two
+in that it builds tones and their relations from the perspective of interval
+ratios. The chromatic scale is thus just one of many options.
+
+Developed by \sphinxstylestrong{Gonzalo Ciruelos}
+\subsubsection*{mingus}
+
+\sphinxhref{https://bspaans.github.io/python-mingus/}{mingus} by \sphinxstylestrong{Bart Spaans}
+\subsubsection*{musictheory}
+
+Developed by Peter Murphy.
+
+\sphinxurl{https://pypi.org/project/musictheory/}
 
 
 \section{Acknowledgements}

@@ -5,31 +5,31 @@
 \let\spxextra \sphinxstyleindexextra
 
   \bigletter G
-  \item \spxentry{get\_accidentals()}\spxextra{musictheory.Tone method}, \hyperpage{15}
-  \item \spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}, \hyperpage{17}
-  \item \spxentry{get\_frequency()}\spxextra{musictheory.Tone method}, \hyperpage{15}
-  \item \spxentry{get\_frequency\_ratio()}\spxextra{musictheory.Interval method}, \hyperpage{18}
-  \item \spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}, \hyperpage{18}
-  \item \spxentry{get\_midi\_pitch()}\spxextra{musictheory.Tone method}, \hyperpage{16}
-  \item \spxentry{get\_name()}\spxextra{musictheory.Tone method}, \hyperpage{16}
-  \item \spxentry{get\_pitch\_class()}\spxextra{musictheory.Tone method}, \hyperpage{16}
-  \item \spxentry{get\_specific\_interval()}\spxextra{musictheory.Interval method}, \hyperpage{18}
-  \item \spxentry{get\_step()}\spxextra{musictheory.Tone method}, \hyperpage{17}
-  \item \spxentry{get\_syntonic()}\spxextra{musictheory.Tone method}, \hyperpage{17}
+  \item \spxentry{get\_accidentals()}\spxextra{musictheory.Tone method}, \hyperpage{17}
+  \item \spxentry{get\_euclidean\_distance()}\spxextra{musictheory.Interval method}, \hyperpage{19}
+  \item \spxentry{get\_frequency()}\spxextra{musictheory.Tone method}, \hyperpage{17}
+  \item \spxentry{get\_frequency\_ratio()}\spxextra{musictheory.Interval method}, \hyperpage{20}
+  \item \spxentry{get\_generic\_interval()}\spxextra{musictheory.Interval method}, \hyperpage{20}
+  \item \spxentry{get\_midi\_pitch()}\spxextra{musictheory.Tone method}, \hyperpage{18}
+  \item \spxentry{get\_name()}\spxextra{musictheory.Tone method}, \hyperpage{18}
+  \item \spxentry{get\_pitch\_class()}\spxextra{musictheory.Tone method}, \hyperpage{18}
+  \item \spxentry{get\_specific\_interval()}\spxextra{musictheory.Interval method}, \hyperpage{20}
+  \item \spxentry{get\_step()}\spxextra{musictheory.Tone method}, \hyperpage{19}
+  \item \spxentry{get\_syntonic()}\spxextra{musictheory.Tone method}, \hyperpage{19}
 
   \indexspace
   \bigletter I
-  \item \spxentry{Interval}\spxextra{class in musictheory}, \hyperpage{17}
+  \item \spxentry{Interval}\spxextra{class in musictheory}, \hyperpage{19}
 
   \indexspace
   \bigletter M
   \item \spxentry{module}
-    \subitem \spxentry{musictheory}, \hyperpage{5}, \hyperpage{15}
+    \subitem \spxentry{musictheory}, \hyperpage{7}, \hyperpage{17}
   \item \spxentry{musictheory}
-    \subitem \spxentry{module}, \hyperpage{5}, \hyperpage{15}
+    \subitem \spxentry{module}, \hyperpage{7}, \hyperpage{17}
 
   \indexspace
   \bigletter T
-  \item \spxentry{Tone}\spxextra{class in musictheory}, \hyperpage{15}
+  \item \spxentry{Tone}\spxextra{class in musictheory}, \hyperpage{17}
 
 \end{sphinxtheindex}
