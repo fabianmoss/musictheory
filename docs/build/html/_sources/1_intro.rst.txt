@@ -78,6 +78,77 @@ General remark: Create excercises with listening, composing and analyzing tasks.
   - modern Western notation
   - different keys (not only treble and bass)
 
+Related work
+~~~~~~~~~~~~~~~~
+
+Books 
++++++
+
+This project is inspired by a number of great books, e.g.
+
+* Aldwell & Schachter (2010). *Harmony and Voice Leading*.
+* Cadwallader & Gagné (1998). *Analysis of Tonal Music. A Schenkerian Approach*.
+* Forte (1977). *The Structure of Atonal Music*.
+* Lewin (1987). *Generalized Intervals and Transformations*.
+* Müller (2015). *Fundamentals of Music Processing*.
+* Straus (2005). *Introduction to Post-Tonal Theory*.
+
+What is new and unique about the approach taken here is that we take 
+a computational perspective and implement all introduced concepts.
+This does not only provide us with sharp and unequivocal definitions,
+but also allows us to scale music theory up from the analysis of individual 
+bars, sections, or pieces to that of entire repertoires and corpora!
+
+Libraries 
++++++++++
+
+.. rubric:: music21
+
+`music21`_, developed by **Mike Cuthbert** at MIT, is 
+a very popular and powerful Python library for 
+computational applications in music theory.
+
+TBC...
+
+.. _`music21`: https://web.mit.edu/music21/
+
+.. rubric:: Music for Geeks and Nerds and pyknon
+
+I recently also discovered `Music for Geeks and Nerds`_ by **Pedro Kroger**
+which looks very interesting. It is based on `pyknon`_, a library for creating
+MIDI files.
+
+.. _`Music for Geeks and Nerds`: https://pedrokroger.net/mfgan/
+.. _`pyknon`: http://kroger.github.io/pyknon/
+
+.. rubric:: musthe
+
+The Python project `musthe`_ also seems to pursue a similar goal and 
+deals with basic musical objects, such as notes, chords, and scales.
+Its basic functionality is similar to the approach taken here, but its 
+scope is limited because it fundamentally builds on the chromatic scale
+as the basic representation of notes. 
+
+The project presented here is more general then the latter two
+in that it builds tones and their relations from the perspective of interval 
+ratios. The chromatic scale is thus just one of many options.
+
+.. _`musthe`: https://github.com/gciruelos/musthe
+
+Developed by **Gonzalo Ciruelos**
+
+.. rubric:: mingus
+
+`mingus`_ by **Bart Spaans**
+
+.. _`mingus`: https://bspaans.github.io/python-mingus/
+
+.. rubric:: musictheory 
+
+Developed by Peter Murphy.
+
+https://pypi.org/project/musictheory/
+
 Acknowledgements
 ~~~~~~~~~~~~~~~~
 
