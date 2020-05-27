@@ -29,21 +29,21 @@
 \contentsline {subsection}{\numberline {2.3.6}Prime Form}{11}{subsection.2.3.6}%
 \contentsline {chapter}{\numberline {3}Fundamentals II}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}The diatonic scale}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Other scales}{13}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Pentatonic}{13}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Scales based on chromaticism}{13}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.2}Other scales}{14}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Pentatonic}{14}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Scales based on chromaticism}{14}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Modes}{14}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Keys}{14}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Time}{14}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Notes}{14}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Rhythm}{14}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Meter}{14}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Musical time vs. performance time}{14}{subsection.3.5.4}%
-\contentsline {section}{\numberline {3.6}Notes on Segmentation}{14}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Indices and tables}{15}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Developers}{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}API Reference \sphinxhyphen {} musictheory}{17}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Tone}{17}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Interval}{19}{subsection.5.1.2}%
-\contentsline {chapter}{Python Module Index}{23}{section*.20}%
-\contentsline {chapter}{Index}{25}{section*.21}%
+\contentsline {subsection}{\numberline {3.5.4}Musical time vs. performance time}{15}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Notes on Segmentation}{15}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Indices and tables}{17}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Developers}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}API Reference \sphinxhyphen {} musictheory}{19}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Tone}{19}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Interval}{21}{subsection.5.1.2}%
+\contentsline {chapter}{Python Module Index}{25}{section*.20}%
+\contentsline {chapter}{Index}{27}{section*.21}%
