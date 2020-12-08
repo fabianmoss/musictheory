@@ -33,13 +33,6 @@ To install the Python library ``musictheory``, type the following in your termin
 Notes
 ~~~~~~~~~~~~~
 
-General structure:
-
-- Theory (axiomatic, consistent, implemented framework)
-- History (expressing different "theories")
-- Analysis (using the library for music analysis, wide variety of musics)
-
-
 - Overarching goal is to have an ACCESSIBLE introduction for musicologists with elementary understanding of a programming language such as Python or R. Requirement should be a sound understanding of how functions, loops, and conditionals work.
 - Every chapter must have:
   -- a very clear focus on one musicological question
@@ -47,6 +40,13 @@ General structure:
   -- a range of exercises (not always involving programming, also listening and composing)
   -- and a list of relevant references
 - the algorithms/methods used in each chapter should be one of the most basic instances of a class of methods. The point is not to have the best classifier, the best dimensionality reduction, the best regression model etc. but rather to understand the class of problems that we are dealing with. Thinking in these abstract problem classes helps to recognize and understand the nature of other problems more easily.
+
+
+General structure:
+
+- Theory (axiomatic, consistent, implemented framework)
+- History (expressing different "theories")
+- Analysis (using the library for music analysis, wide variety of musics)
 
 Old:
 
